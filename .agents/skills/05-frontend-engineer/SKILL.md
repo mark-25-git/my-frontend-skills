@@ -49,19 +49,26 @@ If the current page is a conversion/money page (e.g., Homepage, Pricing, Landing
 - **Visual Excellence**: Follow the [frontend-design](/.agents/skills/frontend-design/SKILL.md) standards. Reject all generic defaults (Inter font, system colors, rounded-md everywhere) unless specified in the Plan.
 - SEO: Inject the keywords and meta-tags from the Gate 1.5 SEO Strategy into the page's `export const metadata`.
 
+### 4. Revision Phase (Visual Feedback)
+If the PM or Visual Director has generated a `VISUAL_AUDIT_REPORT.md`:
+1. **Read the Report**: Analyze the requested conceptual changes.
+2. **Implement**: Modify the existing components in `/components/sections/` or `/app/` to align with the feedback.
+3. **Validation**: Ensure the "Visual Integrity" (Rule 3) is still maintained or enhanced.
+
 ---
 
 ## Pipeline Reporting
-Update `project-state.json` after **every** file/page is successfully written:
+Update `project-state.json` after **every** file/page is successfully written (or revised):
 
 ```json
 {
   "gates": {
     "gate_4": {
       "status": "in_progress",
-      "completed_files": ["app/layout.tsx", "components/sections/Hero.tsx", "..."]
+      "completed_files": ["app/layout.tsx", "components/sections/Hero.tsx", "..."],
+      "revision_status": "Implementing visual audit feedback"
     }
   }
 }
 ```
-Once all pages are done, notify the PM.
+Once all pages (or revisions) are done, notify the PM.

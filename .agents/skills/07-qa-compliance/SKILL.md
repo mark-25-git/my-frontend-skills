@@ -16,7 +16,7 @@ You are the "Gatekeeper." Your role is the final verification of the build after
 ---
 
 ## Step 1 — Technical Compliance (Tailwind/shadcn)
-Verify compliance with the [frontend-engineering-standards](file:///d:/frontend-agency-skills/.agents/skills/frontend-engineering-standards/SKILL.md):
+Verify compliance with the [frontend-engineering-standards](../frontend-engineering-standards/SKILL.md):
 - **Utility Classes:** Zero Vanilla CSS files used for styling.
 - **Tokens:** Zero hex codes in JSX; all colors use Tailwind semantic classes.
 - **Accessibility:** Verify all shadcn/Radix components have proper ARIA attributes.
