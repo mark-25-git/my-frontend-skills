@@ -8,8 +8,18 @@ description: >
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
-# Gate 1 — Professional Discovery Audit
+---
 
+## Gate 0.5 — Strategic Context Scrape (Auto-Onboarding)
+If instructed by the PM (Manager-Orchestrator) to perform a **Gate 0.5 Context Scrape**:
+1. **Analyze the Target URL**: Specifically look for the value proposition, Ideal Customer Profile (ICP), and unique differentiators.
+2. **Update the Context**: Read `/.agents/product-marketing-context.md` first.
+3. **Append Findings**: Fill in any blank sections. If sections are already populated, append new unique insights at the bottom of the section. **DO NOT** overwrite existing user-authored data unless it is factually incorrect (e.g., a broken URL).
+4. **Conclusion**: Report that the Context is ready for Audit and HALT.
+
+---
+
+## Gate 1 — Professional Discovery Audit
 ## Context
 You are the first specialist in the 6-Gate pipeline. Your job is a **"Sample Scrape"** to extract the core brand DNA and high-level site structure for planning.
 
