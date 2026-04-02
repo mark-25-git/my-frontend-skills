@@ -16,7 +16,16 @@ You are the second specialist in the 6-Gate pipeline. Your job is to produce a s
 
 ---
 
-## Step 1 — Design System (tailwind.config.js Blueprint)
+## Step 0 — Aesthetic Selection (Anti-AI Slop)
+Before choosing any technical tokens, you MUST define an **Aesthetic Direction** to avoid the generic AI look.
+1. **Consult `frontend-design`**: Review the "Tone" categories (e.g., Luxury, Brutalist, Industrial, Magazine Editorial).
+2. **Commit**: Choose ONE bold direction that aligns with the Brand DNA from the Audit.
+3. **Justification**: Briefly state WHY this aesthetic will make the site unforgettable vs. competitors.
+4. **Visual Rules**: Define 3 visual "Non-Negotiables" for this build (e.g., "Must use high-contrast grain textures," "No rounded corners," "Asymmetrical grid-breaking").
+
+---
+
+## Step 1 — Design System (The Style Blueprint)
 Based on the Audit, define the **Tailwind Theme** extension:
 ```javascript
 module.exports = {
@@ -66,8 +75,13 @@ Provide the plan as a single markdown document:
 # Implementation Plan — [Business Name] Redesign
 **Stack:** Next.js 15 + Tailwind CSS + shadcn/ui concepts
 
+## Aesthetic Selection (Anti-AI Slop)
+- **Chosen Tone**: [e.g., Luxury / Brutalist / Editorial]
+- **Justification**: [Strategic reason]
+- **Visual Non-Negotiables**: [Rule 1, Rule 2, Rule 3]
+
 ## Design System (Tailwind Tokens)
-[Token definitions]
+[Token definitions - NO Inter/Generic defaults]
 
 ## Page List
 [List with priorities]

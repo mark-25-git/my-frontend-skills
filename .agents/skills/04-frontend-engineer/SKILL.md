@@ -44,8 +44,9 @@ If the current page is a conversion/money page (e.g., Homepage, Pricing, Landing
 - Ensure "Above the Fold" content contains the primary CTA and Benefit Headline from Gate 2.
 
 ### 3. Implementation
-- Stack: **Next.js 15 + Tailwind CSS + shadcn/ui patterns**.
-- Visual Excellence: Follow the [frontend-design](/.agents/skills/frontend-design/SKILL.md) standards to ensure distinctive, non-generic, and premium UI interfaces.
+- **Visual Integrity**: You MUST follow the **Aesthetic Selection** and **Visual Non-Negotiables** from Gate 1.5. 
+- **Stack**: Next.js 15 + Tailwind CSS. Use `shadcn/ui` ONLY as a primitive layer; you are forbidden from using "out-of-the-box" Shadcn styling if it violates the chosen Aesthetic.
+- **Visual Excellence**: Follow the [frontend-design](/.agents/skills/frontend-design/SKILL.md) standards. Reject all generic defaults (Inter font, system colors, rounded-md everywhere) unless specified in the Plan.
 - SEO: Inject the keywords and meta-tags from the Gate 1.5 SEO Strategy into the page's `export const metadata`.
 
 ---

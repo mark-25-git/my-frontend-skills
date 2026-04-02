@@ -42,8 +42,9 @@ You are responsible for "Pushing" the project through the gates.
 1. **Read `project-state.json`** at the start of every turn.
 2. **If a Gate is missing `status: approved`**, immediately invoke the corresponding specialist.
 3. **If a Gate status is `approved`**, immediately trigger the NEXT specialist in the sequence without asking the user.
-4. **If a Gate results in a 'HALT' command (e.g., Gate 0.5 audit)**, STOP and wait for User OK.
-5. **Halt only if `blocked: true`** or if you need the user to approve a specific visual design choice.
+4. **Gate 1 Aesthetic Sign-off**: Before approving Gate 1 and starting Gate 2, you MUST verify that the Architect has defined a specific **Aesthetic Selection** and 3 **Visual Non-Negotiables**. If they are generic (e.g., "SaaS style," "Blue colors"), reject the plan and ask for a BOLD direction.
+5. **If a Gate results in a 'HALT' command (e.g., Gate 0.5 audit)**, STOP and wait for User OK.
+6. **Halt only if `blocked: true`** or if you need the user to approve a specific visual design choice.
 
 ### Gate 2 — AI-Lead Decision
 You must not ask the user to pick copy. Instruct the `copywriting-specialist` to evaluate its internal options and hand off the **single best 100% complete copy** for the top 3 pages.
