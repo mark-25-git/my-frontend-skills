@@ -34,6 +34,11 @@ This protocol defines the communication and engineering standards for all agents
 
 ---
 
+## 3.5 Environment Reliability (Windows Standard)
+- **PowerShell Script Bypassing**: On Windows environments, all terminal-based installations and script executions (like `npx`, `npm`, or `.ps1` files) MUST be prefixed with `cmd /c` as a global standard. This ensures the agent bypasses local PowerShell ExecutionPolicy blocks. (Example: `cmd /c npx create-next-app@latest`).
+
+---
+
 ## 4. Firm-Specific Operations
 - **AI-Led Decisiveness**: For Gate 2 (Copywriting), the AI evaluates the 3 directions internally and selects the "Winner" based on the Audit.
 - **Honest Asset Audit**: If client assets (logos, images) are identified as low-quality during a build, record them in the chat directly and continue with the original assets.

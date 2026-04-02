@@ -40,6 +40,11 @@ module.exports = {
 
 ---
 
+## Step 1.5 — Dependency Manifest (No Drift)
+You MUST define exact major/minor versions for core libraries to prevent environment drift or breaking changes (e.g., `next@15.0.0`, `lucide-react@0.454.0`). These must be used in Gate 3/4.
+
+---
+
 ## Step 2 — Page List & Build Priority
 List every page to be built.
 1. **Home** (Priority: High)

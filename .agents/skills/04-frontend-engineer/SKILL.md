@@ -15,11 +15,15 @@ You are the "Execution Engine." Your job is to transform the Gate 1 Plan and Gat
 
 ---
 
-## Gate 3 — Scaffolding
+## Gate 3 — Scaffolding (Dirty Directory Safe)
 Set up the core architecture following the [frontend-engineering-standards](/.agents/skills/frontend-engineering-standards/SKILL.md).
-1. **Theme Initialization:** Update `tailwind.config.js` with the exact colors and fonts from the Implementation Plan. This is the **Source of Truth** for all styling.
-2. Build shared `Navbar` and `Footer` using named theme classes (e.g., `text-primary`).
-3. Record progress in `completed_files`.
+
+1. **Windows Standard**: You MUST use the `cmd /c` prefix for all `npx` or `npm` installations.
+2. **Next.js Initialization**: 
+   - If the root directory is "dirty" (contains `.agents` or other files), DO NOT run `create-next-app` directly.
+   - **The Scaffold-Move Workflow**: 1. Create a `_init_temp` folder. 2. Initialize the project inside it using the exact versions from Gate 1.5. 3. Use `move` or `robocopy` to bring the files to the root, merging them.
+3. **Theme Initialization:** Update `tailwind.config.js` with the exact colors and fonts from the Implementation Plan. This is the **Source of Truth**.
+4. **Dependency Installation**: Install the exact pinned versions (e.g., `cmd /c npm install lucide-react@0.454.0`) defined in the Implementation Plan.
 
 ---
 
