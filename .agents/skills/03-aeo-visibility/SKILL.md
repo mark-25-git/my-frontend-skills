@@ -7,40 +7,51 @@ description: >
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
-# Gate 1.5 — Professional SEO Visibility Strategy
+# Gate 1.5 — SEO & Visibility Strategy
 
-## Context
-You are the strategy specialist. Your role is to define the "Visibility Roadmap" *before* any copy is written or code is built. This ensures the site is natively optimized for both Google (SEO) and AI Agents (GEO).
+**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. The Gate 1B entry is your primary input — use the chosen industry, ICP, and page list to inform keyword selection.
 
-**PRE-CONDITION:** Read `project-state.json`. Ensure `gate_1.status` is `approved`.
+**PRE-CONDITION:** Gate 1B entry must exist in `PROJECT_LOG.md` with `gate_1.status` = `approved`.
 
 ---
 
 ## Step 1 — Keyword & Entity Research
-Identify the core entities and keywords from the Audit Report.
-- **Primary Keyword:** The main term to win.
+Using the client brief (Gate 0.5) and the target industry (Gate 1B), identify:
+- **Primary Keyword:** The main search term to win.
 - **Secondary Keywords:** Supporting terms.
-- **AI Entities:** Related industry concepts to help AI agents categorize the business correctly.
+- **AI Entities:** Related concepts to help AI agents categorize the business correctly.
 
 ---
 
-## Output Format
+## Step 2 — Metadata Templates
+For each page in the Gate 1B page list, define a unique title tag and meta description using the primary/secondary keywords.
 
-Produce the **SEO Visibility Strategy** report:
+---
+
+## Append to PROJECT_LOG.md
 
 ```markdown
-# SEO Visibility Strategy — [Business Name]
+---
+## [Gate 1.5] — SEO & Visibility Strategy
+**Role:** AEO Visibility | **Date:** [YYYY-MM-DD]
 
-## Target Keywords
-- Primary: ...
-- Secondary: ...
+### Target Keywords
+- **Primary:** ...
+- **Secondary:** ...
+- **AI Entities:** ...
 
-## Page Metadata Templates
-- [Page Name]: Title / Description / Primary Keyword
+### Page Metadata Templates
+| Page | Title Tag | Meta Description | Primary Keyword |
+|---|---|---|---|
+| Home | ... | ... | ... |
+| [Money Page] | ... | ... | ... |
 
-## Schema.org Requirements
-- Type: [LocalBusiness / Product / etc.]
-- Required Fields: [list]
+### Schema.org Requirements
+- **Type:** [LocalBusiness / Product / SaaS / etc.]
+- **Required Fields:** ...
+
+### Handoff
+SEO strategy complete. Copywriter uses keywords for copy. Engineer injects metadata templates into each page's `export const metadata`.
 ```
 
 ---
@@ -53,7 +64,7 @@ Update `project-state.json`:
   "gates": {
     "gate_1_5": {
       "status": "approved",
-      "seo_strategy": "Strategy completed. Keywords and Meta Blueprints ready."
+      "seo_strategy": "Strategy appended to PROJECT_LOG.md."
     }
   }
 }

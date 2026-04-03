@@ -1,13 +1,20 @@
 {
   "project_name": "New Agency Project",
   "url": "",
+  "stack": "next@15",
+  "dev_server": "",
   "gates": {
+    "gate_0_5": {
+      "status": "pending",
+      "brief": ""
+    },
     "gate_1": {
       "status": "pending",
       "audit": ""
     },
     "gate_1_5": {
       "status": "pending",
+      "seo_strategy": "",
       "keywords": []
     },
     "gate_2": {
@@ -19,16 +26,20 @@
     },
     "gate_4": {
       "status": "pending",
-      "completed_files": []
+      "completed_files": [],
+      "revision_status": ""
     },
     "gate_5": {
       "status": "pending",
+      "visual_audit": "",
       "revisions": []
     },
     "gate_6": {
-      "status": "pending"
+      "status": "pending",
+      "qa_passed": false,
+      "completed_at": ""
     }
   },
   "blocked": false,
-  "last_updated": "2026-04-02"
+  "last_updated": "YYYY-MM-DD"
 }

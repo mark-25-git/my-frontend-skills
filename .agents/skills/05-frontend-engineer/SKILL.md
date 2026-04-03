@@ -6,69 +6,123 @@ description: >
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
-# Gate 3 & 4 — Professional Engineering Protocol
+# Gate 3 & 4 — Engineering Protocol
 
-## Context
-You are the "Execution Engine." Your job is to transform the Gate 1 Plan and Gate 2 Copy into a production-grade Next.js 15 site.
+**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. Your inputs are:
+- Gate 1B: Design system tokens, dependency manifest, page list, component inventory, visual non-negotiables
+- Gate 1.5: SEO metadata templates to inject per page
+- Gate 2: Final copy to populate all page content
+- Gate 5 (if exists): Revision list to implement
 
-**PRE-CONDITION:** Read `project-state.json`.
+**PRE-CONDITION:** `gate_2.status` must be `approved` in `project-state.json`.
 
 ---
 
 ## Gate 3 — Scaffolding (Dirty Directory Safe)
 Set up the core architecture following the [frontend-engineering-standards](/.agents/skills/frontend-engineering-standards/SKILL.md).
 
-1. **Windows Standard**: You MUST use the `cmd /c` prefix for all `npx` or `npm` installations.
-2. **Next.js Initialization**: 
+1. **Windows Standard**: Use the `cmd /c` prefix for all `npx` or `npm` commands.
+2. **Next.js Initialization**:
    - If the root directory is "dirty" (contains `.agents` or other files), DO NOT run `create-next-app` directly.
-   - **The Scaffold-Move Workflow**: 1. Create a `_init_temp` folder. 2. Initialize the project inside it using the exact versions from Gate 1.5. 3. Use `move` or `robocopy` to bring the files to the root, merging them.
-3. **Theme Initialization:** Update `tailwind.config.js` with the exact colors and fonts from the Implementation Plan. This is the **Source of Truth**.
-4. **Dependency Installation**: Install the exact pinned versions (e.g., `cmd /c npm install lucide-react@0.454.0`) defined in the Implementation Plan.
+   - **The Scaffold-Move Workflow**: 1. Create `_init_temp`. 2. Initialize inside it using exact versions from the Gate 1B log entry. 3. Use `move` or `robocopy` to merge files to the root.
+3. **Theme Initialization**: Update `tailwind.config.js` with the exact tokens from the Gate 1B log entry. This is the Source of Truth.
+4. **Dependency Installation**: Install exact pinned versions from the Gate 1B manifest.
+
+### Append to PROJECT_LOG.md after Gate 3
+
+```markdown
+---
+## [Gate 3] — Scaffold Complete
+**Role:** Frontend Engineer | **Date:** [YYYY-MM-DD]
+
+- Next.js version: ...
+- Tailwind configured: ✅
+- shadcn/ui initialized: ✅
+- Pinned dependencies installed: ✅
+
+### Handoff
+Scaffold ready. Proceeding to Gate 4 full build.
+```
 
 ---
 
 ## Gate 4 — Full Build (Resumable)
-Build pages in the prioritizing order defined in the Plan.
+Build pages in the priority order from the Gate 1B log entry.
 
 ### 1. Resumption Check
-Before building any page, check `gates.gate_4.completed_files`. **DO NOT** rebuild files that already exist on disk and are recorded in the state.
+Check `gates.gate_4.completed_files` in `project-state.json`. **DO NOT** rebuild files already recorded there.
 
 ### 2. JIT Deep Scrape (Asset Reporting)
-For the current page being built, perform a "Deep Scrape" of the original URL.
-- **Asset Integrity Audit:** If you find low-quality assets (blurry logos, old images), **DO NOT** replace them with AI generated images unless instructed.
-- **Reporting:** Send a brief report about these low-quality assets directly in the chat to the user and continue the build using the original assets.
+For each page, perform a "Deep Scrape" of the original URL.
+- If low-quality assets are found (blurry logos, old images), report them in the chat and continue with the original assets.
+- Do NOT replace with AI-generated images unless the user explicitly asks.
 
-### 2.5 Conversion Audit (The Money Page)
-If the current page is a conversion/money page (e.g., Homepage, Pricing, Landing Page):
+### 2.5 Conversion Audit (Money Pages)
+If the current page is a conversion page (Homepage, Pricing, Landing Page):
 - Consult `marketing-pro-page-cro` to audit the proposed component layout against visual hierarchy and CTA prominence rules.
-- Ensure "Above the Fold" content contains the primary CTA and Benefit Headline from Gate 2.
 
 ### 3. Implementation
-- **Visual Integrity**: You MUST follow the **Aesthetic Selection** and **Visual Non-Negotiables** from Gate 1.5. 
-- **Stack**: Next.js 15 + Tailwind CSS. Use `shadcn/ui` ONLY as a primitive layer; you are forbidden from using "out-of-the-box" Shadcn styling if it violates the chosen Aesthetic.
-- **Visual Excellence**: Follow the [frontend-design](/.agents/skills/frontend-design/SKILL.md) standards. Reject all generic defaults (Inter font, system colors, rounded-md everywhere) unless specified in the Plan.
-- SEO: Inject the keywords and meta-tags from the Gate 1.5 SEO Strategy into the page's `export const metadata`.
+- **Visual Integrity**: Follow the Aesthetic Direction and Visual Non-Negotiables from the Gate 1B log entry.
+- **Copy**: Use the exact copy from the Gate 2 log entry. No placeholders.
+- **SEO**: Inject metadata from the Gate 1.5 log entry into each page's `export const metadata`.
+- **Stack**: Next.js 15 + Tailwind CSS. Use `shadcn/ui` as a primitive layer only.
 
-### 4. Revision Phase (Visual Feedback)
-If the PM or Visual Director has generated a `VISUAL_AUDIT_REPORT.md`:
-1. **Read the Report**: Analyze the requested conceptual changes.
-2. **Implement**: Modify the existing components in `/components/sections/` or `/app/` to align with the feedback.
-3. **Validation**: Ensure the "Visual Integrity" (Rule 3) is still maintained or enhanced.
+### 4. Revision Phase
+If a Gate 5 entry exists in `PROJECT_LOG.md` with a revision list:
+1. Read every revision item.
+2. Implement all changes in `/components/sections/` or `/app/`.
+3. Append a new Gate 4 (Revision) entry to the log when done.
+
+---
+
+## Gate 4 Completion — Start the Dev Server
+
+After all pages are built (or revisions implemented), run:
+```
+cmd /c npm run dev
+```
+
+Confirm the server is accessible at `http://localhost:3000`, then update `project-state.json`:
+
+```json
+{ "dev_server": "http://localhost:3000" }
+```
+
+### Append to PROJECT_LOG.md after Gate 4
+
+```markdown
+---
+## [Gate 4] — Build Complete
+**Role:** Frontend Engineer | **Date:** [YYYY-MM-DD]
+
+### Pages Built
+- app/page.tsx (Home)
+- app/[money-page]/page.tsx
+- ...
+
+### Dev Server
+- URL: http://localhost:3000
+- Status: Running ✅
+
+### Handoff
+All pages built. Dev server running. Passing to Visual Director for Gate 5 audit.
+```
+
+*(For a revision pass, use the heading `## [Gate 4] — Revision Pass` instead.)*
 
 ---
 
 ## Pipeline Reporting
-Update `project-state.json` after **every** file/page is successfully written (or revised):
+Update `project-state.json` after **every** file is written:
 
 ```json
 {
   "gates": {
     "gate_4": {
       "status": "in_progress",
-      "completed_files": ["app/layout.tsx", "components/sections/Hero.tsx", "..."],
-      "revision_status": "Implementing visual audit feedback"
+      "completed_files": ["app/layout.tsx", "components/sections/Hero.tsx"]
     }
   }
 }
 ```
-Once all pages (or revisions) are done, notify the PM.
+Once all pages are done and dev server is confirmed, set `gate_4.status` to `"complete"` and notify the PM.

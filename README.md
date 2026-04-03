@@ -1,46 +1,72 @@
 # Frontend Skills (Agency Intelligence Module)
 
-This repository contains a professional **6-Gate AI-Driven Website Redesign Pipeline**. It is designed to be dropped into any project folder to instantly turn your AI agent into a high-performance marketing agency.
+This repository is a professional **8-Gate AI-Driven Website Redesign Pipeline**. Drop it into any project folder to instantly give your AI agent the skills of a full marketing agency team.
 
 ---
 
-## 🚀 Instant Activation
+## 🚀 How to Start (One Step)
 
-1.  **Clone into your project**:
-    ```bash
-    git clone [repo_url] .agents
-    ```
-2.  **Initialize State**:
-    Copy `.agents/project-state.json.example` to the project root and rename it to `project-state.json`.
-3.  **Fill Gate 0**:
-    Populate `.agents/product-marketing-context.md` with your business details to unlock the agency.
-4.  **Open the Gates**:
-    Ask your AI agent to **"Invoke the Manager-Orchestrator to start Gate 1"** and provide the target website URL.
+1. **Clone into your project:**
+   ```bash
+   git clone [repo_url] .agents
+   ```
 
----
+2. **Run `/start` and give the AI a URL:**
+   > "Start the pipeline for https://example.com"
 
-## 🛠 The 6-Gate Pipeline
-
-- **Gate 1: Discovery & Strategy**: Audit of original site brand DNA and market positioning.
-- **Gate 1.5: SEO Visibility**: Keywords and AI-search optimization plan.
-- **Gate 2: Conversion Copy**: High-persuasion copy using StoryBrand/PAS/AIDA frameworks.
-- **Gate 3/4: Production Build**: Next.js 15 implementation with atomic components and premium UI.
-- **Gate 5: Revision Loop**: Final refinements based on user feedback.
-- **Gate 6: Final QA**: Compliance, speed, and accessibility audit.
+That's it. The AI handles everything from here.
 
 ---
 
-## 🧠 Strategic Libraries (Marketing-Pro)
+## 🤖 What Happens Automatically
 
-This module includes a built-in "Marketing Intelligence" library that the agents consult during the build:
-- **`copywriting`**: Tactical headline formulas.
-- **`marketing-psychology`**: Behavioral triggers (Social Proof, Loss Aversion).
-- **`customer-research`**: Pain-point extraction.
-- **`page-cro`**: Conversion layout auditing.
-- **`seo-audit`**: Technical SEO health.
+After you give the URL, the pipeline runs on its own:
+
+| Gate | What Happens | Who Does It |
+|---|---|---|
+| **Gate 0.5** | AI scrapes the site + researches online → appends client brief to `PROJECT_LOG.md` | Discovery Auditor |
+| ⏸ **You review** | AI shows the brief. You confirm or correct it. | — |
+| **Gate 1A** | Site audit → appended to `PROJECT_LOG.md` | Discovery Auditor |
+| **Gate 1B** | Design direction + implementation plan → appended to `PROJECT_LOG.md` | Conversion Architect |
+| **Gate 1.5** | SEO keyword strategy → appended to `PROJECT_LOG.md` | AEO Visibility |
+| **Gate 2** | AI writes and selects the best copy → appended to `PROJECT_LOG.md` | Copywriting Specialist |
+| **Gate 3** | Next.js project scaffold → appended to `PROJECT_LOG.md` | Frontend Engineer |
+| **Gate 4** | All pages built using copy + design from the log, dev server started → appended to `PROJECT_LOG.md` | Frontend Engineer |
+| **Gate 5** | AI visually audits the live site, revision list → appended to `PROJECT_LOG.md` | Visual Director |
+| ⏸ **You review** | AI shows the revision report. You confirm before final QA. | — |
+| **Gate 6** | Final QA sign-off → appended to `PROJECT_LOG.md` | QA Compliance |
+
+You are only asked to do something **twice** — at the two ⏸ pause points.
+
+---
+
+## 📋 PROJECT_LOG.md — The Team's Shared Document
+
+Every role appends their findings and decisions to `PROJECT_LOG.md` in chronological order. **Past entries are never edited.**
+
+This means:
+- Any AI can pick up the project in a new conversation by reading the log
+- Every decision is traceable (who decided what, when, and why)
+- No information lives only in chat history
+
+The log replaces `product-marketing-context.md`, `VISUAL_AUDIT_REPORT.md`, and `QA_PASSED.md` — all in one place.
+
+---
+
+## 🔄 How to Resume a Project
+
+Start a new chat and run `/start` again. The AI reads `project-state.json` (gate statuses) and `PROJECT_LOG.md` (all decisions), then picks up exactly where it left off.
+
+---
+
+## 🛠 The Tech Stack
+
+All builds use: **Next.js 15 + Tailwind CSS + shadcn/ui**
+
+Declared in `project-state.json` as `"stack": "next@15"`.
 
 ---
 
 ## 📜 Master Protocol
 
-All agents are governed by the `/.agents/protocols/agency-foundation.md`, ensuring **Absolute Honesty**, **Conclusion First** communication, and **Zero Arbitrary Values** in engineering.
+All agents follow `/.agents/protocols/agency-foundation.md` — covering communication standards, engineering integrity, and Windows environment compatibility.

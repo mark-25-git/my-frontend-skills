@@ -6,42 +6,72 @@ description: >
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
-# Gate 6 — Final Professional Audit
+# Gate 6 — Final QA Audit
 
-## Context
-You are the "Gatekeeper." Your role is the final verification of the build after all client revisions (Gate 5) are complete.
+**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. Your inputs are:
+- Gate 1.5: Expected metadata and schema requirements
+- Gate 5: Confirm all revision items are resolved before signing off
 
-**PRE-CONDITION:** Read `project-state.json`. Ensure `gate_5.status` is `approved`.
+**PRE-CONDITION:** `gate_5.status` must be `approved` in `project-state.json`.
 
 ---
 
-## Step 1 — Technical Compliance (Tailwind/shadcn)
-Verify compliance with the [frontend-engineering-standards](../frontend-engineering-standards/SKILL.md):
-- **Utility Classes:** Zero Vanilla CSS files used for styling.
-- **Tokens:** Zero hex codes in JSX; all colors use Tailwind semantic classes.
-- **Accessibility:** Verify all shadcn/Radix components have proper ARIA attributes.
+## Step 0 — Read the Stack
+Check `project-state.json` for the `stack` field before running compliance checks.
+
+- **If `stack` is `next@15`**: Run the full Tailwind/shadcn checklist below.
+- **If different**: Adapt checks to match the declared stack. Do not report false failures.
+
+---
+
+## Step 1 — Technical Compliance
+
+For Next.js 15 + Tailwind CSS:
+- **Utility Classes:** Zero Vanilla CSS files. All styles are Tailwind utility classes.
+- **Tokens:** Zero hex codes in JSX. All colors use named theme classes (e.g., `text-primary`).
+- **Accessibility:** All shadcn/Radix components have correct ARIA attributes.
+- **Component Structure:** Files organized per `frontend-engineering-standards` (`/components/ui/`, `/components/sections/`, `/app/`).
 
 ---
 
 ## Step 2 — SEO & AEO Verification
-- **Metadata:** Check `export const metadata` on every page for unique title/description.
-- **Schema:** Verify JSON-LD scripts are present and correctly populated with client data.
+Cross-check against the Gate 1.5 log entry:
+- **Metadata:** Every page has a unique title and meta description matching the Gate 1.5 templates.
+- **Schema:** JSON-LD scripts are present and populated with real client data (no placeholder text).
 
 ---
 
-## Final Sign-off (QA_PASSED)
-Produce the `QA_PASSED.md` report in the project root:
+## Step 3 — Performance & Mobile
+- No console errors on the running dev server.
+- No horizontal overflow at 375px.
+- All images use `next/image` with explicit `width`, `height`, and `alt` attributes.
+
+---
+
+## Step 4 — Visual Revision Confirmation
+Check the Gate 5 revision list in `PROJECT_LOG.md`. Confirm every `- [ ]` item has been addressed in a subsequent Gate 4 (Revision) log entry.
+
+---
+
+## Append to PROJECT_LOG.md
 
 ```markdown
-# Final QA Handoff — [Business Name]
+---
+## [Gate 6] — Final QA Sign-Off
+**Role:** QA Compliance | **Date:** [YYYY-MM-DD]
 
-### ✅ Checklist Complete
-- [ ] Technical Standard (Tailwind/shadcn)
-- [ ] SEO/AEO Verification
-- [ ] Accessibility (WCAG 2.2 AA)
-- [ ] Performance & Mobile
+### Checklist
+- [x] Technical Standard (Tailwind/shadcn — stack: next@15)
+- [x] SEO/AEO Verification (unique metadata + JSON-LD matching Gate 1.5)
+- [x] Accessibility (WCAG 2.2 AA)
+- [x] Performance & Mobile (no overflow, next/image used)
+- [x] All Gate 5 revision items resolved
 
-Summary: The site is production-ready.
+### Result
+✅ Project is production-ready.
+
+### Handoff
+QA passed. Pipeline complete.
 ```
 
 ---
@@ -55,8 +85,8 @@ Update `project-state.json`:
     "gate_6": {
       "status": "complete",
       "qa_passed": true,
-      "completed_at": "today's date",
-      "message": "Final QA passed. Project ready for deployment."
+      "completed_at": "YYYY-MM-DD",
+      "message": "Final QA passed. Sign-off appended to PROJECT_LOG.md."
     }
   }
 }

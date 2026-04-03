@@ -1,0 +1,22 @@
+# Project-specific files — never commit these to the template repo
+project-state.json
+PROJECT_LOG.md
+
+# Agency deliverables are project-specific
+_agency/
+
+# Next.js build output
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Environment secrets
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db

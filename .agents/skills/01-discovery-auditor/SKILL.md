@@ -8,63 +8,104 @@ description: >
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
----
-
-## Gate 0.5 — Strategic Context Scrape (Auto-Onboarding)
-If instructed by the PM (Manager-Orchestrator) to perform a **Gate 0.5 Context Scrape**:
-1. **Analyze the Target URL**: Specifically look for the value proposition, Ideal Customer Profile (ICP), and unique differentiators.
-2. **Update the Context**: Read `/.agents/product-marketing-context.md` first.
-3. **Append Findings**: Fill in any blank sections. If sections are already populated, append new unique insights at the bottom of the section. **DO NOT** overwrite existing user-authored data unless it is factually incorrect (e.g., a broken URL).
-4. **Conclusion**: Report that the Context is ready for Audit and HALT.
+**FIRST ACTION (any gate):** Read `PROJECT_LOG.md` from top to bottom before doing any work.
 
 ---
 
-## Gate 1 — Professional Discovery Audit
-## Context
-You are the first specialist in the 6-Gate pipeline. Your job is a **"Sample Scrape"** to extract the core brand DNA and high-level site structure for planning.
+## Gate 0.5 — Strategic Context Scrape
 
-**PRE-CONDITION:** Read `project-state.json`. If the `url` is missing, halt and notify the PM.
+This gate auto-populates the client brief. The pipeline cannot start Gate 1 without it.
 
-**Efficiency Rule:** Only browse the **Homepage**, the **Money Page**, and the **About Page**. Do not attempt a full site inventory yet — the Engineer will perform a "Deep Scrape" per page during Gate 4.
+### Step 1 — Scrape the Target URL
+Visit the Homepage, About page, and any pricing or service page. Extract:
+- Value proposition
+- Ideal Customer Profile (ICP)
+- Unique differentiators
+- Brand tone and language
 
----
+### Step 2 — Online Research (Required)
+Search for the business online using whatever sources are most relevant for the industry and business type. The goal is to find real customer opinions, market positioning, and competitive context that the website alone won't reveal.
 
-## Output Format
+Synthesize what you find to build a more accurate customer profile than the website alone would give.
 
-Produce a structured markdown audit report:
+### Step 3 — Append to PROJECT_LOG.md
+Add this entry at the bottom of `PROJECT_LOG.md`. Do not edit anything above the last `---`.
 
 ```markdown
-# Audit Report — [Business Name]
-**URL:** [url]
-**Date:** [today]
+---
+## [Gate 0.5] — Strategic Context Scrape
+**Role:** Discovery Auditor | **Date:** [YYYY-MM-DD]
 
-## Brand DNA
-- Logo Style: ...
-- Colors (Theme): `#hex1` (primary), `#hex2` (secondary)
-- Fonts (Theme): Heading — [font], Body — [font]
-- Brand Tone: [label]
+### Client Brief
+- **Business Name:** ...
+- **Industry:** ...
+- **One-Sentence Pitch:** ...
+- **Core Product / Service:** ...
+- **Value Proposition:** ...
+- **Differentiator:** ...
 
-## IA Overview
-- Nav: Home / Services / About / Contact
-- Conversion Goal: [page name]
-- Primary CTA: "[label]"
+### Target Audience
+- **ICP:** ...
+- **Primary Problem:** ...
+- **Desired Outcome:** ...
+- **Common Objections:** ...
 
-## Top 3 Friction Points
-1. [Specific issue 1]
-2. [Specific issue 2]
-3. [Specific issue 3]
+### Brand Voice
+- **Tone:** ...
+- **Language Style:** ...
+
+### Online Research Findings
+- **Customer Praise:** ...
+- **Customer Complaints:** ...
+- **Market Positioning vs. Competitors:** ...
+
+### Handoff
+Client brief complete. ⏸ Halting for user review before Gate 1A.
+```
+
+### Step 4 — HALT
+Report: "Gate 0.5 complete. Please review the client brief above and confirm before I continue."
 
 ---
 
-## Marketing Intelligence (Advanced)
-Consult the following tactical skills to populate this section:
-1. **SEO Audit (`marketing-pro-seo-audit`)**: Identify critical crawlability and keyword alignment issues.
-2. **Customer Research (`marketing-pro-customer-research`)**: Extract raw customer pains (VOC) from the site.
+## Gate 1A — Discovery Audit
 
-### Findings:
-- **Search Profile**: [Status of H1 titles, meta-data, and image alts]
-- **Market Positioning**: [How well does the site communicate its differentiator vs competitors?]
-- **VOC Extraction**: "[Representative quote found on the site]"
+**PRE-CONDITION:** Gate 0.5 entry must be approved by the user.
+
+**Efficiency Rule:** Only browse the **Homepage**, the **Money Page**, and the **About Page**. The Engineer will do a full page-by-page deep scrape in Gate 4.
+
+Consult `marketing-pro-seo-audit` and `marketing-pro-customer-research` to populate the Marketing Intelligence section.
+
+### Append to PROJECT_LOG.md
+
+```markdown
+---
+## [Gate 1A] — Discovery Audit
+**Role:** Discovery Auditor | **Date:** [YYYY-MM-DD]
+
+### Brand DNA
+- **Logo Style:** ...
+- **Colors:** `#hex1` (primary), `#hex2` (secondary)
+- **Fonts:** Heading — [font], Body — [font]
+- **Brand Tone:** ...
+
+### IA Overview
+- **Nav:** ...
+- **Conversion Goal:** ...
+- **Primary CTA:** "..."
+
+### Top 3 Friction Points
+1. ...
+2. ...
+3. ...
+
+### Marketing Intelligence
+- **Search Profile:** [H1, meta, image alt status]
+- **Market Positioning:** [How well the site communicates its differentiator]
+- **VOC (Voice of Customer):** "[Representative quote from site or reviews]"
+
+### Handoff
+Audit complete. Passing to Conversion Architect for Gate 1B.
 ```
 
 ---
@@ -77,7 +118,7 @@ Update `project-state.json`:
   "gates": {
     "gate_1": {
       "status": "in_progress",
-      "audit": "Sample Audit completed. Handing off to conversion-architect."
+      "audit": "Audit complete. Handing off to conversion-architect."
     }
   }
 }

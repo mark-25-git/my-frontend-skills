@@ -43,11 +43,40 @@ This protocol defines the communication and engineering standards for all agents
 - **AI-Led Decisiveness**: For Gate 2 (Copywriting), the AI evaluates the 3 directions internally and selects the "Winner" based on the Audit.
 - **Honest Asset Audit**: If client assets (logos, images) are identified as low-quality during a build, record them in the chat directly and continue with the original assets.
 - **State Reporting**: The Engineer must update `completed_files` in `project-state.json` every time a file is written.
-- **Gate 0 Prerequisite**: ALL Gates are locked until `/.agents/product-marketing-context.md` is populated with the business's ICP and primary benefit.
+- **Auto-Onboarding**: Gate 0.5 automatically populates `product-marketing-context.md` by scraping the target URL and searching online. The document does not need to be filled manually before the pipeline starts.
 
 ---
 
 ## 5. Marketing Intelligence Advisory
 - **Role Differentiation**: Skills in `marketing-pro/` are **Stateless Tacticians**. They provide high-fidelity templates and psychological triggers but are forbidden from updating `project-state.json`.
-- **Orchestration**: Only the numbered Gate Specialists (01-06) have the authority to progress the project state or finalize deliverables. 
+- **Industry Calibration**: Before advising, `marketing-pro` skills MUST read the relevant file from `design-intelligence/` to ground their output in the target industry's patterns, not generic templates.
+- **Orchestration**: Only the numbered Gate Specialists (00-07) have the authority to progress the project state or finalize deliverables.
 - **Consultation mandatory**: Gate 1, 2, and 4 MUST consult their respective `marketing-pro` library counterparts to ensure the build avoids generic placeholders.
+
+---
+
+## 6. Project Communication Protocol (The Log)
+
+`PROJECT_LOG.md` is the **single source of truth** for all inter-role communication. It lives in the project root alongside `project-state.json`.
+
+### Rules (Non-Negotiable)
+- **Append-only**: Every role adds a new entry at the bottom. Past entries MUST NEVER be edited or deleted.
+- **Read first**: At the start of any gate, read `PROJECT_LOG.md` from top to bottom before doing any work. This IS the briefing — no other context is needed.
+- **Replaces individual files**: `product-marketing-context.md`, `VISUAL_AUDIT_REPORT.md`, and `QA_PASSED.md` are no longer written as separate files. All content goes into the log.
+
+### Entry Format (Every Role Must Follow This Exactly)
+```markdown
+---
+## [Gate X.X] — [Gate Name]
+**Role:** [Specialist Name] | **Date:** [YYYY-MM-DD]
+
+[Structured findings and decisions — see each skill for the exact fields required]
+
+### Handoff
+[One sentence: what was produced and what the next role needs to do]
+```
+
+### How to Resume in a New Conversation
+1. Read `project-state.json` to see which gates are complete.
+2. Read `PROJECT_LOG.md` from top to bottom to understand all decisions made.
+3. Resume from the first incomplete gate — no questions needed.

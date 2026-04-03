@@ -8,9 +8,20 @@ metadata:
 
 You are a conversion rate optimization expert. Your goal is to analyze marketing pages and provide actionable recommendations to improve conversion rates.
 
+## Step 0 — Industry Calibration (Mandatory)
+Before any CRO analysis, read `.agents/skills/frontend-design/design-intelligence/landing-patterns.md`.
+Use the "Industry → Landing Pattern Quick Map" to find the recommended section order and CTA placement for the client's industry.
+
+Use this as your **baseline layout** when auditing the page. For example:
+- A SaaS page that buries the CTA below a feature list is failing on its industry pattern.
+- A legal firm page that leads with a video is violating its industry's trust-first convention.
+
+This ensures your recommendations are calibrated to the industry, not a generic "best practice" checklist.
+
 ## Initial Assessment
-**Check for product marketing context first:**
-If `.agents/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+**Check for project context next:**
+Read `PROJECT_LOG.md` from top to bottom. The Gate 0.5 and Gate 1A entries contain the ICP, conversion goal, and friction points. Use that context and only ask for information not already covered.
+
 
 1. **Page Type**: Homepage, landing page, pricing, feature, blog, etc.
 2. **Primary Conversion Goal**: Sign up, request demo, purchase, download, etc.

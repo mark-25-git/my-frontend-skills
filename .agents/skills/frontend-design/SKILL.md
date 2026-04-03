@@ -8,15 +8,46 @@ This skill guides creation of distinctive, production-grade frontend interfaces 
 
 The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
 
-## Design Thinking
+---
 
-Before coding, understand the context and commit to a BOLD aesthetic direction:
+## Step 0: Industry-Adaptive Design Intelligence (MANDATORY)
+
+**Before any aesthetic decisions, identify the target industry and consult the design intelligence library.**
+
+The library is located at: `.agents/skills/frontend-design/design-intelligence/`
+
+Files to read, in order:
+1. **`industry-rules.md`** — match the client's industry to a row in the table. Extract: recommended style, color mood, typography mood, key effects, and anti-patterns.
+2. **`ui-styles.md`** — look up the recommended style to get its exact CSS keywords and implementation variables.
+3. **`typography-pairings.md`** — use the "Industry → Typography Quick Map" to select the correct font pairing. Get the Google Fonts import string.
+4. **`landing-patterns.md`** — use the "Industry → Landing Pattern Quick Map" to determine the correct page structure and CTA placement.
+
+**If the industry is not listed**, apply the closest adjacent category. Log the gap for future expansion.
+
+The output of Step 0 must be a locked design brief:
+```
+Industry:        [identified]
+Recommended Style: [from industry-rules.md]
+Color Palette:   [from industry-rules.md color mood]
+Typography:      [pairing name + heading font + body font]
+Page Structure:  [pattern name + section order]
+Anti-Patterns:   [list from industry-rules.md — these are BANNED in this build]
+```
+
+Only proceed to Step 1 after this brief is complete.
+
+---
+
+## Step 1: Design Thinking
+
+With the industry brief locked, refine the creative direction:
+
 - **Purpose**: What problem does this interface solve? Who uses it?
-- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.
+- **Differentiation**: Within the boundaries set by the industry brief, what makes this UNFORGETTABLE? What's the one thing someone will remember?
 - **Constraints**: Technical requirements (framework, performance, accessibility).
-- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+- **Tone Execution**: The industry brief defines the style category. Now execute it with a strong point of view — within Glassmorphism, will this be dark and dramatic, or light and airy? Within Brutalism, will this be minimal noir or colorful chaos?
 
-**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
+**CRITICAL**: The industry brief is the constraint. Creative expression lives within it, not outside it. A spa site with neon cyberpunk aesthetics is a failure regardless of how bold it is.
 
 Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
 - Production-grade and functional
@@ -24,19 +55,28 @@ Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
 - Cohesive with a clear aesthetic point-of-view
 - Meticulously refined in every detail
 
-## Frontend Aesthetics Guidelines
+---
+
+## Step 2: Frontend Aesthetics Execution
 
 Focus on:
-- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.
-- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
-- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
-- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
-- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures that match the overall aesthetic. Apply creative forms like gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, and grain overlays.
+- **Typography**: Use the pairing selected in Step 0. Within that pairing, vary weights, sizes, and tracking to create hierarchy. Pair a distinctive display font with a refined body font.
+- **Color & Theme**: Use the color palette defined in Step 0. Build CSS variables for the full palette. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
+- **Motion**: Animations must match the industry mood. Finance/legal = subtle 150–200ms transitions only. Creative agencies = scroll reveals and parallax. Spa/wellness = slow, gentle fades. Never apply the same motion vocabulary to every project.
+- **Spatial Composition**: Unexpected layouts within the style chosen. Asymmetry, overlap, diagonal flow, grid-breaking elements. Generous negative space OR controlled density — match to the industry.
+- **Backgrounds & Visual Details**: Create atmosphere appropriate to the industry. Legal = muted textures, subtle shadows. Luxury = gradient meshes, chromatic depth. Food = warm, rich imagery-led.
 
-NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.
+**Anti-Pattern Enforcement**: The anti-patterns from Step 0 are HARD RULES. Do not use them regardless of creative preference. Log any anti-pattern that was tempting — it means the brief is working.
 
-Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations.
+---
 
-**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Elegance comes from executing the vision well.
+## Universal Rules (Always Apply)
 
-Remember: Claude is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
+NEVER use generic AI-generated aesthetics like:
+- Overused font families without context (Inter, Roboto, Arial as defaults — only use if the industry brief calls for them)
+- Clichéd color schemes (AI purple/pink gradients on white, unless building an AI product)
+- Predictable layouts and cookie-cutter components that lack context-specific character
+
+Every build must be unmistakably designed for its specific industry. No design should be identical to another. Industry constraints are creative fuel, not limitations.
+
+**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations. Minimalist or refined designs need restraint, precision, and attention to spacing. Elegance comes from executing the vision well, not from ignoring the rules.

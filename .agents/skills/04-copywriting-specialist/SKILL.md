@@ -6,60 +6,66 @@ description: >
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
-# Gate 2 — Professional Copywriting Protocol
+# Gate 2 — Copywriting
 
-## Context
-You are the Gate 2 specialist. You are responsible for the final copy.
+**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. Your inputs are:
+- Gate 0.5: Client brief (ICP, tone, differentiators)
+- Gate 1A: Friction points and VOC quotes
+- Gate 1B: Page list and brand voice direction
+- Gate 1.5: Keywords to weave into copy
 
-**PRE-CONDITION:** Read `project-state.json`. Ensure `gate_1_5.status` is `approved`.
+**PRE-CONDITION:** Gate 1.5 entry must exist in `PROJECT_LOG.md`.
 
 ---
 
 ## Step 1 — Framework + Tactical Logic
-Select a framework (StoryBrand, PAS, or AIDA). 
-- **Tactical Strategy**: Consult `marketing-pro-copywriting` for high-conversion headline formulas and primary benefit framing.
-- **Conversion Audit**: Consult `marketing-pro-marketing-psychology` to identify the core psychological triggers (e.g., Loss Aversion or Social Proof) relevant to this industry.
+Select a framework (StoryBrand, PAS, or AIDA) based on the brand tone from the client brief.
+- Consult `marketing-pro-copywriting` for high-conversion headline formulas.
+- Consult `marketing-pro-marketing-psychology` to identify the core psychological triggers (Loss Aversion, Social Proof, etc.) relevant to this industry.
 
 ---
 
 ## Step 2 — Internal Choice (Decisiveness)
-You must generate 3 distinct messaging directions internally. You will then **evaluate them against the Audit** (Friction points, conversion goals, brand tone) and choose the "Winning Direction" yourself. Use Google Antigravity to make this choice.
+Generate 3 distinct messaging directions internally. Evaluate them against the audit's friction points, conversion goals, and brand tone. Choose the winning direction yourself — do not ask the user.
 
 ---
 
 ## Step 3 — Complete Output (No Placeholders)
-Output the **Winning Copy Direction** and the **Full Content** for these primary areas:
-1. **Homepage Hero, CTA, Features, Value-Prop.**
-2. **About Page Core Message.**
-3. **Money Page (Conversion page) Headline and Call-to-Action.**
+Write complete copy for:
+1. **Homepage** — Hero headline, subheadline, value prop section, primary CTA.
+2. **About Page** — Core message.
+3. **Money Page** — Conversion headline, offer description, CTA.
 
 ---
 
-## Final Copy Result
-
-Produce a markdown copy document:
+## Append to PROJECT_LOG.md
 
 ```markdown
-# Winning Copy Direction — [Business Name]
-Chosen Framework: [framework name]
-SEO Focus: [Primary/Secondary Keywords included]
+---
+## [Gate 2] — Winning Copy
+**Role:** Copywriting Specialist | **Date:** [YYYY-MM-DD]
 
-## Brand Voice Overview
-[Description]
+### Direction Chosen
+- **Framework:** [StoryBrand / PAS / AIDA]
+- **Winning Direction:** [Name + one-line rationale]
+- **SEO Keywords Woven In:** [Primary + secondary]
 
-## Homepage Copy Draft
-[Headline]
-[Subheadline]
-[Value Prop Section]
-[CTA Button]
+### Homepage Copy
+**Hero Headline:** ...
+**Subheadline:** ...
+**Value Prop Section:** ...
+**Primary CTA:** "..."
 
-## About Page Copy Draft
-[Core messaging]
+### About Page Copy
+[Core message]
 
-## Money Page [page name] Copy Draft
-[Conversion headline]
-[Offer description]
-[CTA Button]
+### [Money Page Name] Copy
+**Conversion Headline:** ...
+**Offer Description:** ...
+**CTA:** "..."
+
+### Handoff
+Copy complete. Engineer reads this entry to populate page content in Gate 4. No placeholders — all copy is final.
 ```
 
 ---
@@ -72,7 +78,7 @@ Update `project-state.json`:
   "gates": {
     "gate_2": {
       "status": "approved",
-      "message": "Winning copy generated and handed off for build. Logic refined over 3 internal directions."
+      "message": "Winning copy appended to PROJECT_LOG.md."
     }
   }
 }
