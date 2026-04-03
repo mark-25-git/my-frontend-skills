@@ -53,6 +53,14 @@ Check the Gate 5 revision list in `PROJECT_LOG.md`. Confirm every `- [ ]` item h
 
 ---
 
+## Step 5 — Functional Integrity (The Final Click)
+Perform a exhaustive "Click-Through Audit" of the entire site:
+- **Links:** Zero 404s. All navigation and footer links must resolve.
+- **Buttons:** Every CTA (Call to Action) must either anchor to the correct section or navigate to the intended page.
+- **Forms:** Contact/Access forms must have functional UI states (loading, success, error) and correctly formatted fields.
+
+---
+
 ## Append to PROJECT_LOG.md
 
 ```markdown
@@ -65,6 +73,7 @@ Check the Gate 5 revision list in `PROJECT_LOG.md`. Confirm every `- [ ]` item h
 - [x] SEO/AEO Verification (unique metadata + JSON-LD matching Gate 1.5)
 - [x] Accessibility (WCAG 2.2 AA)
 - [x] Performance & Mobile (no overflow, next/image used)
+- [x] Functional Integrity (Zero broken paths or dead buttons)
 - [x] All Gate 5 revision items resolved
 
 ### Result

@@ -28,6 +28,7 @@ Check `project-state.json` for the `dev_server` field.
 Use `read_browser_page` on the `dev_server` URL (e.g., `http://localhost:3000`).
 
 - **Responsiveness**: Inspect at Desktop (1920px), Tablet (768px), Mobile (375px).
+- **Functional Click-Through**: Click **EVERY** navbar link, footer link, and primary CTA (e.g., "Request Access", "Get Started"). Ensure they anchor to the correct section or navigate to the correct internal page without 404s.
 - **Pages**: Homepage, the primary Money Page, and at least one secondary page.
 
 ---
@@ -37,7 +38,8 @@ Use `read_browser_page` on the `dev_server` URL (e.g., `http://localhost:3000`).
 2. **Consistency**: Same design language for all buttons? Consistent font pairings across sections?
 3. **Responsive Flow**: Correct stacking on mobile? No horizontal overflow?
 4. **Interactive States**: Hover effects, focus states, transitions — do they feel premium?
-5. **Aesthetic WOW Factor**: Does the build match the Visual Non-Negotiables from Gate 1B?
+5. **Functional Integrity**: Are all buttons and links connected? (No broken paths or dead buttons).
+6. **Aesthetic WOW Factor**: Does the build match the Visual Non-Negotiables from Gate 1B?
 
 ---
 
@@ -50,6 +52,7 @@ Use `read_browser_page` on the `dev_server` URL (e.g., `http://localhost:3000`).
 
 ### Compliance Score
 - **Aesthetic Alignment:** [1–10] — [Justification]
+- **Functional Integrity:** [Pass / Fail] — [List any broken links or dead buttons]
 - **Responsiveness:** [Pass / Fail] — [Breakpoints that failed, if any]
 - **Visual Non-Negotiables:**
   - [Rule 1]: ✅ / ❌
@@ -72,7 +75,7 @@ Use `read_browser_page` on the `dev_server` URL (e.g., `http://localhost:3000`).
 
 ## CRITICAL RESTRAINTS
 1. **DO NOT WRITE CODE**: You are an auditor. Do not modify `.tsx` or `.css` files.
-2. **ONLY VISUAL**: Ignore functional bugs unless they impact visual layout.
+2. **NO PLACEHOLDERS**: Flag any remaining "Lorem Ipsum" or generic AI placeholders as revision items.
 
 ---
 

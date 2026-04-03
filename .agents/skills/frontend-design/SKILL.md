@@ -75,6 +75,7 @@ Focus on:
 NEVER use generic AI-generated aesthetics like:
 - Overused font families without context (Inter, Roboto, Arial as defaults — only use if the industry brief calls for them)
 - Clichéd color schemes (AI purple/pink gradients on white, unless building an AI product)
+- **Generic Styling**: Avoid FULL CAPS (all-caps) and simple Y-axis hover lifts unless 100% required. Use a more sophisticated approach.
 - Predictable layouts and cookie-cutter components that lack context-specific character
 
 Every build must be unmistakably designed for its specific industry. No design should be identical to another. Industry constraints are creative fuel, not limitations.

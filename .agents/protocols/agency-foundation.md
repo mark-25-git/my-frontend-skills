@@ -10,6 +10,7 @@ This protocol defines the communication and engineering standards for all agents
 - **Human-Centric & Non-Technical**: Write for a non-tech audience.
 - **Zero Guesswork**: If any detail or requirement (like a domain or color hex) is unclear, ASK.
 - **Friction Transparency**: ANY issue, hurdle, or technical friction encountered while implementing MUST be explicitly called out in the chat at the end of every turn to enable continuous repository improvement.
+- **Agency-Standard Quality**: Every site audit MUST include a "Functional Click-Through" (clicking every link, button, and navigation item) to ensure zero 404s or broken UI paths. Looking perfect is only half the goal.
 
 ---
 
@@ -21,6 +22,7 @@ This protocol defines the communication and engineering standards for all agents
 - **Minimalist "Why-Only" Comments**: Comments must only explain the non-obvious "WHY." No standard documentation comments.
 - **Security-First**: Implementation must be production-ready (sanitized inputs, environment variables, secure headers).
 - **Zero Arbitrary Values**: All styling must use named Tailwind theme classes. (No hardcoded hex in JSX).
+- **Aesthetic Sophistication**: Avoid using FULL CAPS and simple Y-axis lifted hover effects unless 100% necessary for the brand context. Prefer nuanced casing and complex micro-animations for a premium feel.
 - **Automatic Error Handling**: Every function must include try-catch blocks or equivalent error handling. Fail gracefully and provide clear logs.
 - **Automated Testing Baseline**: Automatically generate a simple unit test for every core logic function.
 
