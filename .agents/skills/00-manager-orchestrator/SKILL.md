@@ -35,7 +35,8 @@ You MUST advance the project on your own. You do NOT ask the user "shall I conti
 2. Find the first gate where `status` is NOT `approved` or `complete`.
 3. Fire the corresponding specialist immediately.
 4. When a specialist finishes, re-read both files and advance to the next gate.
-5. **Only stop** when you hit a declared HALT point (see below) or `blocked: true`.
+5. **Friction Reporting**: At the end of every gate, summarize any "Frictions & Preventions" reported by the specialist in the chat for the user.
+6. **Only stop** when you hit a declared HALT point (see below) or `blocked: true`.
 
 ### The Two HALT Points
 The pipeline stops and asks the user for confirmation only at:

@@ -9,6 +9,7 @@ This protocol defines the communication and engineering standards for all agents
 - **Absolute Honesty**: Never misreport results or "hallucinate" success. If a scrape or build fails, report it exactly.
 - **Human-Centric & Non-Technical**: Write for a non-tech audience.
 - **Zero Guesswork**: If any detail or requirement (like a domain or color hex) is unclear, ASK.
+- **Friction Transparency**: ANY issue, hurdle, or technical friction encountered while implementing MUST be explicitly called out in the chat at the end of every turn to enable continuous repository improvement.
 
 ---
 
@@ -36,6 +37,9 @@ This protocol defines the communication and engineering standards for all agents
 
 ## 3.5 Environment Reliability (Windows Standard)
 - **PowerShell Script Bypassing**: On Windows environments, all terminal-based installations and script executions (like `npx`, `npm`, or `.ps1` files) MUST be prefixed with `cmd /c` as a global standard. This ensures the agent bypasses local PowerShell ExecutionPolicy blocks. (Example: `cmd /c npx create-next-app@latest`).
+- **Terminal Syntax**: Use strictly Windows commands (e.g., `rd /s /q` to delete folders, `del` for files, `dir` for listing). Never use Unix-like commands (like `rm`, `ls`, or `cp`).
+- **Naming Restrictions**: Never start folder or project names with an underscore (`_`). Use dashes instead (e.g., `init-temp` instead of `_init_temp`) to avoid OS-level naming errors.
+- **Dependency Resilience (Next.js 15)**: When installing animation or UI libraries (like `framer-motion`) on Next.js 15 / React 19, use the `--legacy-peer-deps` flag to bypass version mismatch errors.
 
 ---
 
@@ -71,6 +75,9 @@ This protocol defines the communication and engineering standards for all agents
 **Role:** [Specialist Name] | **Date:** [YYYY-MM-DD]
 
 [Structured findings and decisions — see each skill for the exact fields required]
+
+### Frictions & Preventions
+[Mandatory: list ANY technical issues, hurdles, or frictions encountered and how to prevent them in the future]
 
 ### Handoff
 [One sentence: what was produced and what the next role needs to do]

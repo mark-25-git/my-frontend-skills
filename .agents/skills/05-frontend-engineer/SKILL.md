@@ -24,9 +24,9 @@ Set up the core architecture following the [frontend-engineering-standards](/.ag
 1. **Windows Standard**: Use the `cmd /c` prefix for all `npx` or `npm` commands.
 2. **Next.js Initialization**:
    - If the root directory is "dirty" (contains `.agents` or other files), DO NOT run `create-next-app` directly.
-   - **The Scaffold-Move Workflow**: 1. Create `_init_temp`. 2. Initialize inside it using exact versions from the Gate 1B log entry. 3. Use `move` or `robocopy` to merge files to the root.
+   - **The Scaffold-Move Workflow**: 1. Create `init-temp`. 2. Initialize inside it using exact versions from the Gate 1B log entry. 3. Use `move` or `robocopy` to merge files to the root.
 3. **Theme Initialization**: Update `tailwind.config.js` with the exact tokens from the Gate 1B log entry. This is the Source of Truth.
-4. **Dependency Installation**: Install exact pinned versions from the Gate 1B manifest.
+4. **Dependency Installation**: Install exact pinned versions from the Gate 1B manifest. For Next.js 15 / React 19, if installing animation libraries like `framer-motion`, use the `--legacy-peer-deps` flag to prevent version conflicts.
 
 ### Append to PROJECT_LOG.md after Gate 3
 
@@ -39,6 +39,9 @@ Set up the core architecture following the [frontend-engineering-standards](/.ag
 - Tailwind configured: ✅
 - shadcn/ui initialized: ✅
 - Pinned dependencies installed: ✅
+
+### Frictions & Preventions
+- [List ANY issues, hurdles, or technical frictions encountered here]
 
 ### Handoff
 Scaffold ready. Proceeding to Gate 4 full build.
@@ -103,6 +106,9 @@ Confirm the server is accessible at `http://localhost:3000`, then update `projec
 ### Dev Server
 - URL: http://localhost:3000
 - Status: Running ✅
+
+### Frictions & Preventions
+- [List ANY issues, hurdles, or technical frictions encountered here]
 
 ### Handoff
 All pages built. Dev server running. Passing to Visual Director for Gate 5 audit.
