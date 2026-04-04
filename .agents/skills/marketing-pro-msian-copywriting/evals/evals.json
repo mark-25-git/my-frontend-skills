@@ -1,0 +1,23 @@
+{
+  "skill_name": "marketing-pro-msian-copywriting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a headline and CTA for a new local coffee brand competing with ZUS Coffee. It's called 'Kampung Kopi'. Target: Urban Gen Z professionals.",
+      "expected_output": "Should use 'Aspirational (Global Quality)' tone. Minimalist, premium feel. Likely English-first but with a local touch. Avoid being too loud or cheap.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write a hero section for a Malaysian e-commerce platform's Hari Raya sale. Focus on 'Murah' and 'Balik Kampung'.",
+      "expected_output": "Should use 'Level B: Mass-Market / Bicultural' tone. Incorporate phrases like 'Raya Penuh Rezeki', 'Balik Kampung', and 'Jimat Gila'. High-energy, loud promotional feel.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Craft an 'About' page intro for a local skincare brand using 'Bicultural' language (Manglish/Malay-infused). Target: Everyday Malaysian women.",
+      "expected_output": "Should blend English and localized phrases. Tone is friendly, neighborly, and community-focused. Use words like 'Sama-Sama', 'Authentic', and 'Mampu Milik'.",
+      "files": []
+    }
+  ]
+}
