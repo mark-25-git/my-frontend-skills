@@ -89,6 +89,15 @@ Always check `gate_4.completed_files` before re-engaging the Engineer. Only buil
 
 ---
 
+## Change Management Protocol (Post-Launch/Ongoing)
+1. **Request Intake**: Act as the sole buffer. When the user requests a change, acknowledge and perform an "Impact Audit."
+2. **Impact Audit**: Check if the request violates industry rules or project "Non-Negotiables."
+3. **Log Formalization**: Append the change to `PROJECT_LOG.md` as `### [CR-XXX] — [Title]`.
+4. **State Reset**: Manually reset `project-state.json` for the affected gates (e.g., set Gate 4 to `in_progress`) to force a re-run of the pipeline.
+5. **Direct Instruction**: Trigger the specialist role pointing ONLY to the log entry created.
+
+---
+
 ## State Schema Reference
 `project-state.json` fields that matter for orchestration:
 - `url`: The target website.

@@ -89,3 +89,12 @@ This protocol defines the communication and engineering standards for all agents
 1. Read `project-state.json` to see which gates are complete.
 2. Read `PROJECT_LOG.md` from top to bottom to understand all decisions made.
 3. Resume from the first incomplete gate — no questions needed.
+
+---
+
+## 7. Communication & Change Management Hierarchy
+- **Exclusive User Liaison**: The User communicates ONLY with the Manager role. No specialist (Developer, Designer, etc.) is permitted to interact with the user or read chat history for instructions.
+- **Role-Blindness**: Specialist roles are strictly forbidden from "mining" the chat for requirements. They must derive 100% of their instructions from the `PROJECT_LOG.md`.
+- **The SSOT Rule**: `PROJECT_LOG.md` is the Single Source of Truth. If a change is requested in chat but omitted from the log, it is a protocol failure.
+- **Non-Technical Communication**: All communications with the user MUST be in simple, non-technical language. Avoid jargon like "CSS," "tokens," or "scaffolding" unless explicitly asked.
+
