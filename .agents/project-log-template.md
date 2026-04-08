@@ -1,4 +1,4 @@
-# Project Log — [Business Name or URL]
+# Project Log — [url]
 **Started:** [YYYY-MM-DD]
 **URL:** [url]
 
