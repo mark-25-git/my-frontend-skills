@@ -45,6 +45,14 @@ This protocol defines the communication and engineering standards for all agents
 
 ---
 
+## 3.6 Fast-Track Initialization (The "Cold Start" Optimization)
+- **The OneDrive "Why"**: In synced workspaces (OneDrive/Dropbox), the `write_to_file` tool can cause 5-10 second "spinning" delays because it waits for a buffer-sync signature while the OS client locks the file.
+- **Bootstrapping standard**: When creating `project-state.json` or `PROJECT_LOG.md` for the very first time, agents MUST use a single `run_command` via PowerShell instead of `write_to_file`.
+- **Syntax**: `cmd /c "powershell -Command 'Set-Content -Path project-state.json -Value ''{json_content}'''"`
+- **Transition**: Use this "raw write" ONLY for initial creation. Once the file exists, transition immediately to `replace_file_content` for surgical, safe updates.
+
+---
+
 ## 4. Firm-Specific Operations
 - **AI-Led Decisiveness**: For Gate 2 (Copywriting), the AI evaluates the 3 directions internally and selects the "Winner" based on the Audit.
 - **Honest Asset Audit**: If client assets (logos, images) are identified as low-quality during a build, record them in the chat directly and continue with the original assets.

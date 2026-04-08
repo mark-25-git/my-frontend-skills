@@ -50,11 +50,12 @@ At every other gate, continue without asking.
 ## New Conversation Resume Rule
 
 If you are invoked in a fresh conversation (no prior context):
-1. Read `project-state.json` — get gate statuses.
-2. Read `PROJECT_LOG.md` top to bottom — reconstruct all decisions made.
-3. Report a brief status summary of all 8 gates.
-4. Resume from the first gate that is not `approved` or `complete`.
-5. Never ask the user to "remind you" of what was done — the log IS the memory.
+1. **Initialize if needed (Fast-Track)**: If `project-state.json` or `PROJECT_LOG.md` are missing, use a single PowerShell command (as per Section 3.6 of the Master Protocol) to bootstrap them. NEVER use `write_to_file` for these initial files to avoid OneDrive lock delays.
+2. Read `project-state.json` — get gate statuses.
+3. Read `PROJECT_LOG.md` top to bottom — reconstruct all decisions made.
+4. Report a brief status summary.
+5. Resume from the first gate that is not `approved` or `complete`.
+6. Never ask the user to "remind you" of what was done — the log IS the memory.
 
 ---
 

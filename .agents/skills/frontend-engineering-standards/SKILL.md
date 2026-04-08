@@ -49,3 +49,12 @@ Self-check every file:
 5. [ ] **Accessibility checked?**
 6. [ ] **"Why-Only" comments only?** (Standard in agency-foundation.md)
 7. [ ] **Recorded in project-state.json?**
+
+---
+
+## Rule 5 — Image Resilience & Stability
+
+To avoid "Broken Image" icons and Next.js configuration crashes:
+1. **Auto-Whitelisting**: During initialization (Gate 3), the `next.config.ts` MUST include the target domain (from `project-state.json`) in `remotePatterns`.
+2. **SafeImage Fallback**: Never use the raw `Image` component for external assets. Use a `SafeImage` wrapper that uses `onError` to swap to a "Blank Card" fallback.
+3. **The Blank Card Standard**: The fallback must be a clean, styled `div` (e.g., `bg-muted` with rounded corners) that displays the image's "alt" description centered inside. This ensures the UI remains polished and the content remains understandable even if the asset fails.

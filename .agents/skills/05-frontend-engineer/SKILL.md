@@ -27,6 +27,7 @@ Set up the core architecture following the [frontend-engineering-standards](/.ag
    - **The Scaffold-Move Workflow**: 1. Create `init-temp`. 2. Initialize inside it using exact versions from the Gate 1B log entry. 3. Use `move` or `robocopy` to merge files to the root.
 3. **Theme Initialization**: Update `tailwind.config.js` with the exact tokens from the Gate 1B log entry. This is the Source of Truth.
 4. **Dependency Installation**: Install exact pinned versions from the Gate 1B manifest. For Next.js 15 / React 19, if installing animation libraries like `framer-motion`, use the `--legacy-peer-deps` flag to prevent version conflicts.
+5. **Image Configuration (Auto-Whitelist)**: Create `next.config.ts` including the hostname of the target URL (from `project-state.json`) in the `remotePatterns` section to prevent "Invalid src prop" errors.
 
 ### Append to PROJECT_LOG.md after Gate 3
 
@@ -69,6 +70,7 @@ If the current page is a conversion page (Homepage, Pricing, Landing Page):
 - **Copy**: Use the exact copy from the Gate 2 log entry. No placeholders.
 - **SEO**: Inject metadata from the Gate 1.5 log entry into each page's `export const metadata`.
 - **Stack**: Next.js 15 + Tailwind CSS. Use `shadcn/ui` as a primitive layer only.
+- **Image Resilience**: Use a `SafeImage` component for all external assets. If an image fails to load, it MUST render a styled "Blank Card" (using `bg-muted` and `flex items-center justify-center`) displaying the original `alt` text as a label to maintain UI beauty.
 
 ### 4. Revision Phase
 If a Gate 5 entry exists in `PROJECT_LOG.md` with a revision list:

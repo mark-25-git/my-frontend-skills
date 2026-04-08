@@ -29,7 +29,9 @@ Search for the business online using whatever sources are most relevant for the 
 Synthesize what you find to build a more accurate customer profile than the website alone would give.
 
 ### Step 3 — Append to PROJECT_LOG.md
-Add this entry at the bottom of `PROJECT_LOG.md`. Do not edit anything above the last `---`.
+Add this entry at the bottom of `PROJECT_LOG.md`. 
+
+**Fast-Track Rule (Section 3.6 Protocol)**: If this is a new project and `PROJECT_LOG.md` does not yet exist, you MUST use a single PowerShell `run_command` (raw write via `Set-Content`) to create the file. Do NOT use `write_to_file` for this initial write to avoid OneDrive lock delays.
 
 ```markdown
 ---
