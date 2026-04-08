@@ -45,10 +45,9 @@ This protocol defines the communication and engineering standards for all agents
 
 ---
 
-## 3.6 Fast-Track Initialization (Deprecated)
-- **The OneDrive "Why"**: In synced workspaces (OneDrive/Dropbox), the `write_to_file` tool occasionally caused minor spinning delays. 
-- **Current Standard**: The previous PowerShell bootstrapping standard (`cmd /c`) has been DEPRECATED as it causes infinite terminal hangs on multi-line strings.
-- **Rule**: Agents MUST use the native `write_to_file` tool to create `PROJECT_STATE.md` and `PROJECT_LOG.md`. Do not use terminal commands for file creation.
+## 3.6 Initialization Standard
+- **Rule**: Agents MUST use the native `write_to_file` tool to create `PROJECT_STATE.md` and `PROJECT_LOG.md`. 
+- **Efficiency**: Avoid complex terminal-based file creation commands as they can cause execution hangs in the background environment. Standardize on the built-in file writing tools for reliability.
 
 ---
 

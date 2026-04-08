@@ -21,17 +21,7 @@ Check if `PROJECT_STATE.md` exists in the project root.
 
 **If it does NOT exist (new project):**
 - **1. Copy and Update State**: Read `.agents/project-state-template.md`, paste it into `PROJECT_STATE.md` via `write_to_file`, and update the `[url]` placeholder and `Last Updated` date to today.
-- **2. Create Log File**: Create `PROJECT_LOG.md` in the project root via `write_to_file` with exactly this header and nothing else:
-
-```markdown
-# Project Log — [Business Name or URL]
-**Started:** [YYYY-MM-DD]
-**URL:** [url]
-
-> This file is append-only. Past entries must never be edited or deleted.
-> Every role reads this file top-to-bottom at the start of their gate.
-
-```
+- **2. Create Log File**: Read `.agents/project-log-template.md`, paste it into `PROJECT_LOG.md` via `write_to_file`, and update the `[url]` and `[YYYY-MM-DD]` placeholders accurately.
 
 - Report: "New project created. Starting from Gate 0.5."
 
