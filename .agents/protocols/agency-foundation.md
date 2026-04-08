@@ -46,8 +46,8 @@ This protocol defines the communication and engineering standards for all agents
 ---
 
 ## 3.6 Initialization Standard
-- **Rule**: Agents MUST use the native `write_to_file` tool to create `PROJECT_STATE.md` and `PROJECT_LOG.md`. 
-- **Efficiency**: Avoid complex terminal-based file creation commands as they can cause execution hangs in the background environment. Standardize on the built-in file writing tools for reliability.
+- **Rule**: Agents MUST use the native `write_to_file` tool to create `PROJECT_STATE.md`. 
+- **Efficiency**: Standardize on built-in file writing tools to maintain maximum environment reliability.
 
 ---
 
@@ -67,34 +67,19 @@ This protocol defines the communication and engineering standards for all agents
 
 ---
 
-## 6. Project Communication Protocol (The Log)
-
-`PROJECT_LOG.md` is the **single source of truth** for all inter-role communication. It lives in the project root alongside `PROJECT_STATE.md`.
+`PROJECT_STATE.md` is the **single source of truth** for all project progress and history. It lives in the project root.
 
 ### Rules (Non-Negotiable)
-- **Append-only**: Every role adds a new entry at the bottom. Past entries MUST NEVER be edited or deleted.
-- **Read first**: At the start of any gate, read `PROJECT_LOG.md` from top to bottom before doing any work. This IS the briefing — no other context is needed.
-- **Replaces individual files**: `product-marketing-context.md`, `VISUAL_AUDIT_REPORT.md`, and `QA_PASSED.md` are no longer written as separate files. All content goes into the log.
+- **Dashboard Consistency**: Gate statuses in the top section MUST always match the detail entries in the History section.
+- **Append-only History**: Every role adds a new entry at the bottom of the "Project History & Log" section. Past entries MUST NEVER be edited.
+- **Read first**: At the start of any gate, read `PROJECT_STATE.md` from top to bottom before doing any work. This IS the briefing.
 
-### Entry Format (Every Role Must Follow This Exactly)
-```markdown
----
-## [Gate X.X] — [Gate Name]
-**Role:** [Specialist Name] | **Date:** [YYYY-MM-DD]
-
-[Structured findings and decisions — see each skill for the exact fields required]
-
-### Frictions & Preventions
-[Mandatory: list ANY technical issues, hurdles, or frictions encountered and how to prevent them in the future]
-
-### Handoff
-[One sentence: what was produced and what the next role needs to do]
-```
+### Entry Format
+Add your Gate findings at the end of the file under `## [Gate X.X] — [Gate Name]`.
 
 ### How to Resume in a New Conversation
 1. Read `PROJECT_STATE.md` to see which gates are complete.
-2. Read `PROJECT_LOG.md` from top to bottom to understand all decisions made.
-3. Resume from the first incomplete gate — no questions needed.
+2. Resume from the first incomplete gate — no questions needed.
 
 ---
 
