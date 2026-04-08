@@ -31,7 +31,7 @@ Synthesize what you find to build a more accurate customer profile than the webs
 ### Step 3 — Append to PROJECT_LOG.md
 Add this entry at the bottom of `PROJECT_LOG.md`. 
 
-**Fast-Track Rule (Section 3.6 Protocol)**: If this is a new project and `PROJECT_LOG.md` does not yet exist, you MUST use a single PowerShell `run_command` (raw write via `Set-Content`) to create the file. Do NOT use `write_to_file` for this initial write to avoid OneDrive lock delays.
+**Creation Rule**: If this is a new project and `PROJECT_LOG.md` does not yet exist, use `write_to_file` to create the file.
 
 ```markdown
 ---
@@ -113,16 +113,14 @@ Audit complete. Passing to Conversion Architect for Gate 1B.
 ---
 
 ## Pipeline Reporting
-Update `project-state.json`:
+Update `PROJECT_STATE.md`:
 
-```json
-{
-  "gates": {
-    "gate_1": {
-      "status": "in_progress",
-      "audit": "Audit complete. Handing off to conversion-architect."
-    }
-  }
-}
+Change the Gate 1 status to:
+`- [x] **Gate 1**: in_progress`
+
+And update the Gate Details section for Gate 1:
+```markdown
+**Gate 1 (Discovery Audit)**
+- Audit Result: Audit complete. Handing off to conversion-architect.
 ```
 Then notify the PM.

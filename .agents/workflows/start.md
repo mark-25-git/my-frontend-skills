@@ -17,13 +17,11 @@ Nothing else is required from the user.
 
 ## Step 1 — Check Project State
 
-Check if `project-state.json` exists in the project root.
+Check if `PROJECT_STATE.md` exists in the project root.
 
 **If it does NOT exist (new project):**
-- Copy `.agents/project-state.json.example` to the project root and rename it `project-state.json`.
-- Write the provided URL into the `url` field.
-- Set `last_updated` to today's date.
-- Create `PROJECT_LOG.md` in the project root with this exact header and nothing else:
+- **1. Copy and Update State**: Read `.agents/project-state-template.md`, paste it into `PROJECT_STATE.md` via `write_to_file`, and update the `[url]` placeholder and `Last Updated` date to today.
+- **2. Create Log File**: Create `PROJECT_LOG.md` in the project root via `write_to_file` with exactly this header and nothing else:
 
 ```markdown
 # Project Log — [Business Name or URL]
@@ -38,7 +36,7 @@ Check if `project-state.json` exists in the project root.
 - Report: "New project created. Starting from Gate 0.5."
 
 **If it DOES exist (resuming):**
-- Read `project-state.json` to get gate statuses.
+- Read `PROJECT_STATE.md` to get gate statuses.
 - Read `PROJECT_LOG.md` to reconstruct the full project context.
 - Report a brief status table of all 8 gates.
 - Report: "Resuming project. Picking up from [last incomplete gate]."
@@ -49,7 +47,7 @@ Check if `project-state.json` exists in the project root.
 
 After state and log are ready, activate the `manager-orchestrator` skill.
 
-The Orchestrator will read `project-state.json` and `PROJECT_LOG.md`, then advance automatically through all pending gates without requiring further input from the user — unless a HALT point is reached.
+The Orchestrator will read `PROJECT_STATE.md` and `PROJECT_LOG.md`, then advance automatically through all pending gates without requiring further input from the user — unless a HALT point is reached.
 
 ---
 

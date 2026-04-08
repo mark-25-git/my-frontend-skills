@@ -45,24 +45,23 @@ This protocol defines the communication and engineering standards for all agents
 
 ---
 
-## 3.6 Fast-Track Initialization (The "Cold Start" Optimization)
-- **The OneDrive "Why"**: In synced workspaces (OneDrive/Dropbox), the `write_to_file` tool can cause 5-10 second "spinning" delays because it waits for a buffer-sync signature while the OS client locks the file.
-- **Bootstrapping standard**: When creating `project-state.json` or `PROJECT_LOG.md` for the very first time, agents MUST use a single `run_command` via PowerShell instead of `write_to_file`.
-- **Syntax**: `cmd /c "powershell -Command 'Set-Content -Path project-state.json -Value ''{json_content}'''"`
-- **Transition**: Use this "raw write" ONLY for initial creation. Once the file exists, transition immediately to `replace_file_content` for surgical, safe updates.
+## 3.6 Fast-Track Initialization (Deprecated)
+- **The OneDrive "Why"**: In synced workspaces (OneDrive/Dropbox), the `write_to_file` tool occasionally caused minor spinning delays. 
+- **Current Standard**: The previous PowerShell bootstrapping standard (`cmd /c`) has been DEPRECATED as it causes infinite terminal hangs on multi-line strings.
+- **Rule**: Agents MUST use the native `write_to_file` tool to create `PROJECT_STATE.md` and `PROJECT_LOG.md`. Do not use terminal commands for file creation.
 
 ---
 
 ## 4. Firm-Specific Operations
 - **AI-Led Decisiveness**: For Gate 2 (Copywriting), the AI evaluates the 3 directions internally and selects the "Winner" based on the Audit.
 - **Honest Asset Audit**: If client assets (logos, images) are identified as low-quality during a build, record them in the chat directly and continue with the original assets.
-- **State Reporting**: The Engineer must update `completed_files` in `project-state.json` every time a file is written.
+- **State Reporting**: The Engineer must update `completed_files` in `PROJECT_STATE.md` every time a file is written.
 - **Auto-Onboarding**: Gate 0.5 automatically populates `product-marketing-context.md` by scraping the target URL and searching online. The document does not need to be filled manually before the pipeline starts.
 
 ---
 
 ## 5. Marketing Intelligence Advisory
-- **Role Differentiation**: Skills in `marketing-pro/` are **Stateless Tacticians**. They provide high-fidelity templates and psychological triggers but are forbidden from updating `project-state.json`.
+- **Role Differentiation**: Skills in `marketing-pro/` are **Stateless Tacticians**. They provide high-fidelity templates and psychological triggers but are forbidden from updating `PROJECT_STATE.md`.
 - **Industry Calibration**: Before advising, `marketing-pro` skills MUST read the relevant file from `design-intelligence/` to ground their output in the target industry's patterns, not generic templates.
 - **Orchestration**: Only the numbered Gate Specialists (00-07) have the authority to progress the project state or finalize deliverables.
 - **Consultation mandatory**: Gate 1, 2, and 4 MUST consult their respective `marketing-pro` library counterparts to ensure the build avoids generic placeholders.
@@ -71,7 +70,7 @@ This protocol defines the communication and engineering standards for all agents
 
 ## 6. Project Communication Protocol (The Log)
 
-`PROJECT_LOG.md` is the **single source of truth** for all inter-role communication. It lives in the project root alongside `project-state.json`.
+`PROJECT_LOG.md` is the **single source of truth** for all inter-role communication. It lives in the project root alongside `PROJECT_STATE.md`.
 
 ### Rules (Non-Negotiable)
 - **Append-only**: Every role adds a new entry at the bottom. Past entries MUST NEVER be edited or deleted.
@@ -94,7 +93,7 @@ This protocol defines the communication and engineering standards for all agents
 ```
 
 ### How to Resume in a New Conversation
-1. Read `project-state.json` to see which gates are complete.
+1. Read `PROJECT_STATE.md` to see which gates are complete.
 2. Read `PROJECT_LOG.md` from top to bottom to understand all decisions made.
 3. Resume from the first incomplete gate — no questions needed.
 
