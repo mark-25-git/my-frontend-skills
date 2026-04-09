@@ -18,10 +18,11 @@ description: >
 
 ---
 
-## Step 1 — Framework + Tactical Logic
-Select a framework (StoryBrand, PAS, or AIDA) based on the brand tone from the client brief.
+## Step 1 — Framework + Solution Logic
+Select a framework (StoryBrand, PAS, or AIDA) based on the brand tone.
+- **MANDATORY: Pain-Solution Mapping**: Before drafting, map 3 specific customer pains to 3 specific solutions. Every word you write must provide the solution.
 - Consult `marketing-pro-copywriting` for high-conversion headline formulas.
-- Consult `marketing-pro-marketing-psychology` to identify the core psychological triggers (Loss Aversion, Social Proof, etc.) relevant to this industry.
+- Consult `marketing-pro-marketing-psychology` to identify the core psychological triggers.
 
 ---
 
@@ -73,7 +74,8 @@ Copy complete. Engineer reads this entry to populate page content in Gate 4. No 
 
 *   **FULL CAPS**: Never provide copy in all-caps (uppercase) for any element. This is a strict user preference. Use Title Case or Sentence Case.
 *   **Clichéd Footers**: Never use "Made with [heart]" or "Made with ❤️" phrasing. It is a marker of generic AI. Use specific, brand-aligned professional language instead.
-*   **Generic Badge Content**: Avoid using uppercase, high-contrast badges for fillers. Every badge must serve a specific functional purpose (e.g., "Award Winning", "Special Offer").
+*   **Pretentious AI-Vocabulary**: NEVER use words like **"Pedigree"**, **"Engineering"** (as a metaphor for service), **"Legendary"**, **"Unrivaled"**, **"Physical Identity"**, or **"Show, don't just tell."** These words aim to impress rather than solve.
+*   **Zero-Value Fluff**: Every word must provide a solution. If a word is "fancy" but doesn't solve a pain point, remove it. **Do not write to impress; write to solve the problem.**
 ```
 
 ---

@@ -29,9 +29,10 @@ Before writing, identify the target "Language Level":
 
 ### 1. Level A: Premium / English-First
 *   **Target**: Urban professionals, Gen Z, High-Net-Worth.
-*   **Tone**: Minimalist, serif-driven, aspirational.
+*   **Tone**: **High-Clarity Sincerity**. Use simple, direct, and high-quality English to signal reliability.
 *   **Example (ZUS Coffee)**: *"a Necessity, not a Luxury."*
-*   **Avoid**: Over-use of slang or "Loud" promotional colors.
+*   **Avoid**: "Pretentious AI-vocab" (e.g., *Pedigree, Engineering, Legendary*).
+*   **Goal**: Solve the problem immediately, don't try to "impress" with fancy words.
 
 ### 2. Level B: Mass-Market / Bicultural (Manglish/Malay)
 *   **Target**: Everyday shoppers, families, suburban/rural markets.
@@ -79,6 +80,7 @@ Malaysians primarily browse on phones. CTAs must be thumb-friendly and app-centr
 ## 🚫 Local Anti-Patterns (NEVER Use)
 
 *   **Generic "AI" Tone**: Avoid overly formal, robot-like English. Never use patterns like "Made with [heart] for [Audience]" — this is perceived as low-effort AI slop.
+*   **Pretentious AI-Vocabulary (BANNED)**: NEVER use words like **"Pedigree"**, **"Engineering"** (when applied to services), **"Legendary"**, **"Unrivaled"**, **"Physical Identity"**, or **"Show, don't just tell."** These signal "AI-generated fluff" and do not solve problems.
 *   **Excessive Capitalization**: Avoid FULL CAPS for titles, headers, and badges. This is a strict user preference. Use title case or sentence case to maintain a premium feel.
 *   **Hidden Prices**: Malaysians want to know the "How Much" early. Hidden prices (PM for price) now signal untrustworthiness.
 *   **Off-Season Imagery**: Don't use winter/snow imagery in Malaysian ads. Use tropical, mall-centric, or "Kampung" motifs.
@@ -87,6 +89,12 @@ Malaysians primarily browse on phones. CTAs must be thumb-friendly and app-centr
 ---
 
 ## 🚀 Deliverable Format
+
+**MANDATORY: The Solution Check**
+Before writing any copy, identify:
+1.  **The Pain**: What is the *one* specific thing stressing the customer right now?
+2.  **The Solution**: How does this product take that stress away *immediately*?
+Every sentence in the final copy must contribute to this solution. **Do not write to impress; write to solve the problem.**
 
 When providing copy, include:
 1.  **Draft 1 (Premium)**: English-first for a modern feel.

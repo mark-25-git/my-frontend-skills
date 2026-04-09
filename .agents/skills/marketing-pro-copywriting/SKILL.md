@@ -67,7 +67,11 @@ Each section should advance one argument. Build a logical flow down the page.
 - Passive voice constructions?
 - Exclamation points? (remove them)
 - Marketing buzzwords without substance?
-- **AI-Generic Phrasing?** (Search for "Made with [heart]" or similar tropes - remove them)
+- **Sincerity & Solution Audit**: 
+    - Does this line solve a specific pain, or is it just 'fancy'?
+    - If I read this to a real customer, would they roll their eyes or feel understood?
+    - Is every word working toward the solution? **Do not write to impress; write to solve.**
+- **AI-Generic Phrasing?** (Search for "Made with [heart]" or "Pedigree" or "Legendary" - remove them)
 - **Excessive Capitalization?** (Ensure NO FULL CAPS per user preference)
 
 For thorough line-by-line review, use the **copy-editing** skill after your draft.
