@@ -66,6 +66,14 @@ Write complete copy for:
 
 ### Handoff
 Copy complete. Engineer reads this entry to populate page content in Gate 4. No placeholders — all copy is final.
+
+---
+
+## 🚫 Aesthetic & Quality Anti-Patterns (NEVER Use)
+
+*   **FULL CAPS**: Never provide copy in all-caps (uppercase) for any element. This is a strict user preference. Use Title Case or Sentence Case.
+*   **Clichéd Footers**: Never use "Made with [heart]" or "Made with ❤️" phrasing. It is a marker of generic AI. Use specific, brand-aligned professional language instead.
+*   **Generic Badge Content**: Avoid using uppercase, high-contrast badges for fillers. Every badge must serve a specific functional purpose (e.g., "Award Winning", "Special Offer").
 ```
 
 ---

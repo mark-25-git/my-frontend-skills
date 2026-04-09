@@ -52,9 +52,12 @@ Self-check every file:
 
 ---
 
-## Rule 5 — Image Resilience & Stability
+---
 
-To avoid "Broken Image" icons and Next.js configuration crashes:
-1. **Auto-Whitelisting**: During initialization (Gate 3), the `next.config.ts` MUST include the target domain (from `project-state.json`) in `remotePatterns`.
-2. **SafeImage Fallback**: Never use the raw `Image` component for external assets. Use a `SafeImage` wrapper that uses `onError` to swap to a "Blank Card" fallback.
-3. **The Blank Card Standard**: The fallback must be a clean, styled `div` (e.g., `bg-muted` with rounded corners) that displays the image's "alt" description centered inside. This ensures the UI remains polished and the content remains understandable even if the asset fails.
+## Rule 6 — Aesthetic Professionalism (Zero "AI Slop")
+
+Every component MUST be generated with an artisanal, non-generic finish.
+1. **No Ping/Bounce Slop**: Never use `animate-ping` for badges or `animate-bounce` for background circles. These signal "templated AI."
+2. **No FULL CAPS**: All copy, badges, and titles must use Title Case or Sentence Case. NO all-caps permitted per user preference.
+3. **Professional Footers**: Never generate "Made with [heart]" footers. Use brand-appropriate professional attribution.
+4. **Purposeful Badges**: Only use badges when they represent real meta-data or status. Avoid using "upper-case, bold, high-contrast" badges just to fill space.

@@ -78,7 +78,8 @@ Malaysians primarily browse on phones. CTAs must be thumb-friendly and app-centr
 
 ## 🚫 Local Anti-Patterns (NEVER Use)
 
-*   **Generic "AI" Tone**: Avoid overly formal, robot-like English that doesn't acknowledge the local context.
+*   **Generic "AI" Tone**: Avoid overly formal, robot-like English. Never use patterns like "Made with [heart] for [Audience]" — this is perceived as low-effort AI slop.
+*   **Excessive Capitalization**: Avoid FULL CAPS for titles, headers, and badges. This is a strict user preference. Use title case or sentence case to maintain a premium feel.
 *   **Hidden Prices**: Malaysians want to know the "How Much" early. Hidden prices (PM for price) now signal untrustworthiness.
 *   **Off-Season Imagery**: Don't use winter/snow imagery in Malaysian ads. Use tropical, mall-centric, or "Kampung" motifs.
 *   **Ignoring Language Nuance**: Don't just translate English to Malay. Use localized Malay (e.g., "Mampu Milik" instead of just "Affordable").

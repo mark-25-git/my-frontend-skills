@@ -56,4 +56,5 @@ These patterns are **universally wrong** for professional client work. Never use
 - **Bright neon colors** — wrong for healthcare, legal, senior care, government
 - **Playful/Claymorphism** — wrong for finance, legal, government, healthcare, enterprise B2B
 - **Generic Inter/Roboto at default weights** — always pair with a distinctive display font or use a unique pairing from `typography-pairings.md`
-- **FULL CAPS & Simple Y-Hover** — Avoid using all-caps text and basic vertical hover lifts unless 100% required by the specific brand context.
+- **NO FULL CAPS (User Preference)** — Do not use all-caps text for titles, headers, or badges. Use Sentence Case or Title Case.
+- **AI-Generic SLOP** — NEVER use `animate-ping` for badges, `animate-bounce` for decorative background elements, or "Made with [heart]" footers.

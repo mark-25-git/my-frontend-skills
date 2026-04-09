@@ -72,11 +72,19 @@ Focus on:
 
 ## Universal Rules (Always Apply)
 
-NEVER use generic AI-generated aesthetics like:
-- Overused font families without context (Inter, Roboto, Arial as defaults — only use if the industry brief calls for them)
-- Clichéd color schemes (AI purple/pink gradients on white, unless building an AI product)
-- **Generic Styling**: Avoid FULL CAPS (all-caps) and simple Y-axis hover lifts unless 100% required. Use a more sophisticated approach.
-- Predictable layouts and cookie-cutter components that lack context-specific character
+NEVER use generic AI-generated aesthetics. These signal "low-fidelity" and reduce brand authority.
+
+### BANNED Visual Patterns
+- **Ping Badges**: Never use `animate-ping` for status indicators or badges. It is overused and visually distracting.
+- **Bouncing Decorations**: Never use `animate-bounce` on large background circles or floating decorative elements.
+- **Unnecessary Badges**: Avoid "badge-glazing." Only use badges for meaningful categorization, not for filler.
+- **Clichéd Footers**: Never write "Made with [heart] for [Audience]." It is a tired AI trope. Use professional equivalents like "Supporting Malaysian University Leaders" or "Crafted for [Client Name]."
+
+### Typographical & Styling Rules
+- **NO FULL CAPS**: Avoid all-caps (uppercase) text for titles, badges, and headers unless it is a legal requirement or part of a pre-approved brand logo. This is a strict user preference.
+- **Generic Fonts**: Avoid Inter, Roboto, or Arial as defaults. Use the specific pairing from the industry brief.
+- **Y-Axis Hover Lifts**: Avoid simple vertical lifts. Use more sophisticated interactions (e.g., subtle scale, shadow expansion, or internal element movement).
+- **AI Color Gradients**: Banned in professional contexts (purple/pink on white) unless the project is explicitly for an AI product.
 
 Every build must be unmistakably designed for its specific industry. No design should be identical to another. Industry constraints are creative fuel, not limitations.
 

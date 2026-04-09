@@ -67,6 +67,8 @@ Each section should advance one argument. Build a logical flow down the page.
 - Passive voice constructions?
 - Exclamation points? (remove them)
 - Marketing buzzwords without substance?
+- **AI-Generic Phrasing?** (Search for "Made with [heart]" or similar tropes - remove them)
+- **Excessive Capitalization?** (Ensure NO FULL CAPS per user preference)
 
 For thorough line-by-line review, use the **copy-editing** skill after your draft.
 
