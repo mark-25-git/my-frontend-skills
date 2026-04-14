@@ -2,30 +2,30 @@
 name: visual-director
 description: >
   Visual audit of the built website. Browses the live site, checks against the
-  Architect's "Visual Non-Negotiables", and appends a Visual Audit entry to PROJECT_LOG.md.
+  Architect's "Visual Non-Negotiables", and appends a Visual Audit entry to PROJECT_STATE.md.
   Trigger this during Gate 5 to review the built frontend before QA.
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
 # Gate 5 — Visual Quality Audit
 
-**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. Your input is the Gate 1B entry — specifically the Aesthetic Direction and Visual Non-Negotiables. Those are the benchmark you audit against.
+**FIRST ACTION:** Read `PROJECT_STATE.md` from top to bottom. Your input is the Gate 1B entry — specifically the Aesthetic Direction and Visual Non-Negotiables. Those are the benchmark you audit against.
 
-**PRE-CONDITION:** `gate_4.status` must be `complete` in `project-state.json`.
+**PRE-CONDITION:** Gate 4 must be `complete` in `PROJECT_STATE.md`.
 
 ---
 
 ## Step 0 — Verify Dev Server is Running
 
-Check `project-state.json` for the `dev_server` field.
+Check `PROJECT_STATE.md` for the `Dev Server` link.
 
-- **If empty or missing**: HALT. Notify the PM: "Dev server not started. Instruct the Engineer to run `cmd /c npm run dev` and update `dev_server` in `project-state.json`."
+- **If empty or missing**: HALT. Notify the PM: "Dev server not started. Instruct the Engineer to run `cmd /c npm run dev` and update `Dev Server` in `PROJECT_STATE.md`."
 - **If populated**: Proceed.
 
 ---
 
 ## Step 1 — Visual Inspection (Browser Required)
-Use `read_browser_page` on the `dev_server` URL (e.g., `http://localhost:3000`).
+Use `read_browser_page` on the `Dev Server` URL (e.g., `http://localhost:3000`).
 
 - **Responsiveness**: Inspect at Desktop (1920px), Tablet (768px), Mobile (375px).
 - **Functional Click-Through**: Click **EVERY** navbar link, footer link, and primary CTA (e.g., "Request Access", "Get Started"). Ensure they anchor to the correct section or navigate to the correct internal page without 404s.
@@ -43,7 +43,7 @@ Use `read_browser_page` on the `dev_server` URL (e.g., `http://localhost:3000`).
 
 ---
 
-## Append to PROJECT_LOG.md
+## Append to PROJECT_STATE.md
 
 ```markdown
 ---
@@ -80,16 +80,14 @@ Use `read_browser_page` on the `dev_server` URL (e.g., `http://localhost:3000`).
 ---
 
 ## Pipeline Reporting
-Update `project-state.json`:
+Update `PROJECT_STATE.md`:
 
-```json
-{
-  "gates": {
-    "gate_5": {
-      "status": "in_progress",
-      "visual_audit": "Audit appended to PROJECT_LOG.md."
-    }
-  }
-}
+Change the Gate 5 status to:
+`- [ ] **Gate 5**: complete` (Check the box `[x]` ONLY if passed with 9+/10 and no revision list)
+
+And update the Gate Details section for Gate 5:
+```markdown
+**Gate 5 (Visual Audit)**
+- Audit Result: Audit appended to PROJECT_STATE.md.
 ```
 Notify the PM. If revisions are needed, the Engineer returns to Gate 4. If passed, the PM will ask the user for approval before Gate 6.
