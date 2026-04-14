@@ -18,7 +18,7 @@ Match the client's industry to a row in the table. Use the "Market Positioning" 
 This calibration ensures your pain-point extraction is industry-specific, not generic.
 
 **Check for project context first:**
-Read `PROJECT_STATE.md` from top to bottom. The Gate 0.5 client brief entry is your primary source for ICP, tone, and pain-point context. Use that to skip questions already answered.
+Read `PROJECT_LOG.md` from top to bottom. The Gate 0.5 client brief entry is your primary source for ICP, tone, and pain-point context. Use that to skip questions already answered.
 
 
 ---

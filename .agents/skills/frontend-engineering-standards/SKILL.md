@@ -48,7 +48,7 @@ Self-check every file:
 4. [ ] **Responsive design?** (sm:, md:, lg:)
 5. [ ] **Accessibility checked?**
 6. [ ] **"Why-Only" comments only?** (Standard in agency-foundation.md)
-7. [ ] **Recorded in PROJECT_STATE.md?**
+7. [ ] **Recorded in project-state.json?**
 
 ---
 

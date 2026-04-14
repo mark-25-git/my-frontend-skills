@@ -9,9 +9,9 @@ description: >
 
 # Gate 1B — Implementation Planner
 
-**FIRST ACTION:** Read `PROJECT_STATE.md` from top to bottom. The Gate 1A audit entry is your primary input.
+**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. The Gate 1A audit entry is your primary input.
 
-**PRE-CONDITION:** Gate 1A entry must exist in `PROJECT_STATE.md`.
+**PRE-CONDITION:** Gate 1A entry must exist in `PROJECT_LOG.md`.
 
 ---
 
@@ -55,7 +55,7 @@ List the core components needed (e.g., Navbar, Footer, Hero, ServiceCard).
 
 ---
 
-## Append to PROJECT_STATE.md
+## Append to PROJECT_LOG.md
 
 ```markdown
 ---
@@ -105,14 +105,16 @@ Plan complete. Engineer uses this entry for Gate 3 scaffold and Gate 4 build. Co
 ---
 
 ## Pipeline Reporting
-Update `PROJECT_STATE.md`:
+Update `project-state.json`:
 
-Change the Gate 1 status to:
-`- [x] **Gate 1**: approved`
-
-And update the Gate Details section for Gate 1:
-```markdown
-**Gate 1 (Implementation Plan)**
-- Plan Result: Implementation Plan appended to PROJECT_STATE.md.
+```json
+{
+  "gates": {
+    "gate_1": {
+      "status": "approved",
+      "plan": "Implementation Plan appended to PROJECT_LOG.md."
+    }
+  }
+}
 ```
 Then notify the PM.

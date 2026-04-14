@@ -8,13 +8,13 @@ description: >
 
 # Gate 2 — Copywriting
 
-**FIRST ACTION:** Read `PROJECT_STATE.md` from top to bottom. Your inputs are:
+**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. Your inputs are:
 - Gate 0.5: Client brief (ICP, tone, differentiators)
 - Gate 1A: Friction points and VOC quotes
 - Gate 1B: Page list and brand voice direction
 - Gate 1.5: Keywords to weave into copy
 
-**PRE-CONDITION:** Gate 1.5 entry must exist in `PROJECT_STATE.md`.
+**PRE-CONDITION:** Gate 1.5 entry must exist in `PROJECT_LOG.md`.
 
 ---
 
@@ -39,7 +39,7 @@ Write complete copy for:
 
 ---
 
-## Append to PROJECT_STATE.md
+## Append to PROJECT_LOG.md
 
 ```markdown
 ---
@@ -67,7 +67,6 @@ Write complete copy for:
 
 ### Handoff
 Copy complete. Engineer reads this entry to populate page content in Gate 4. No placeholders — all copy is final.
-```
 
 ---
 
@@ -77,18 +76,21 @@ Copy complete. Engineer reads this entry to populate page content in Gate 4. No 
 *   **Clichéd Footers**: Never use "Made with [heart]" or "Made with ❤️" phrasing. It is a marker of generic AI. Use specific, brand-aligned professional language instead.
 *   **Pretentious AI-Vocabulary**: NEVER use words like **"Pedigree"**, **"Engineering"** (as a metaphor for service), **"Legendary"**, **"Unrivaled"**, **"Physical Identity"**, or **"Show, don't just tell."** These words aim to impress rather than solve.
 *   **Zero-Value Fluff**: Every word must provide a solution. If a word is "fancy" but doesn't solve a pain point, remove it. **Do not write to impress; write to solve the problem.**
+```
 
 ---
 
 ## Pipeline Reporting
-Update `PROJECT_STATE.md`:
+Update `project-state.json`:
 
-Change the Gate 2 status to:
-- [x] **Gate 2**: approved
-
-And update the Gate Details section for Gate 2:
-```markdown
-**Gate 2 (Copywriting)**
-- Copy Result: Winning copy appended to PROJECT_STATE.md.
+```json
+{
+  "gates": {
+    "gate_2": {
+      "status": "approved",
+      "message": "Winning copy appended to PROJECT_LOG.md."
+    }
+  }
+}
 ```
 Then notify the PM.
