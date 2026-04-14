@@ -74,7 +74,7 @@ Use `read_browser_page` on the `Dev Server` URL (e.g., `http://localhost:3000`).
 ---
 
 ## CRITICAL RESTRAINTS
-1. **DO NOT WRITE CODE**: You are an auditor. Do not modify `.tsx` or `.css` files.
+1. **DO NOT WRITE CODE**: You are an auditor. Do not modify source code or style files (e.g., .html, .vue, .tsx, .css).
 2. **NO PLACEHOLDERS**: Flag any remaining "Lorem Ipsum" or generic AI placeholders as revision items.
 
 ---

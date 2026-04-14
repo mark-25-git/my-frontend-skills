@@ -19,18 +19,18 @@ description: >
 ## Step 0 — Read the Stack
 Check `PROJECT_STATE.md` for the `Stack` field before running compliance checks.
 
-- **If `stack` is `next@15`**: Run the full Tailwind/shadcn checklist below.
-- **If different**: Adapt checks to match the declared stack. Do not report false failures.
+- **If `stack` is `next`**: Run the Next.js/Tailwind checklist.
+- **If `stack` is `html` or `vue`**: Prioritize semantic HTML, CSS-only animations (where possible), and Composition API usage.
 
 ---
 
 ## Step 1 — Technical Compliance
 
-For Next.js 15 + Tailwind CSS:
-- **Utility Classes:** Zero Vanilla CSS files. All styles are Tailwind utility classes.
-- **Tokens:** Zero hex codes in JSX. All colors use named theme classes (e.g., `text-primary`).
-- **Accessibility:** All UI components have correct ARIA attributes.
-- **Component Structure:** Files organized per `frontend-engineering-standards` (`/components/ui/`, `/components/sections/`, `/app/`).
+For HTML or Vue + Tailwind CSS:
+- **Utility Classes:** Zero Vanilla CSS files (exceptions for mandatory global resets).
+- **Tokens:** Zero hex codes in markup/JSX. All colors use named theme classes.
+- **Accessibility:** All UI components have correct ARIA attributes and semantic nesting.
+- **Component Structure:** Files organized logically (e.g., `/components/` for Vue, separate `.html` and `.js` for static).
 
 ---
 
@@ -44,7 +44,7 @@ Cross-check against the Gate 1.5 entry in `PROJECT_STATE.md`:
 ## Step 3 — Performance & Mobile
 - No console errors on the running dev server.
 - No horizontal overflow at 375px.
-- All images use `next/image` with explicit `width`, `height`, and `alt` attributes.
+- Images have explicit `width`, `height`, and `alt` attributes. (Use `next/image` only if on Next.js stack).
 
 ---
 
@@ -69,10 +69,10 @@ Perform a exhaustive "Click-Through Audit" of the entire site:
 **Role:** QA Compliance | **Date:** [YYYY-MM-DD]
 
 ### Checklist
-- [x] Technical Standard (Tailwind/shadcn — stack: next@15)
+- [x] Technical Standard (Tailwind-based — stack: [html/vue/next])
 - [x] SEO/AEO Verification (unique metadata + JSON-LD matching Gate 1.5)
 - [x] Accessibility (WCAG 2.2 AA)
-- [x] Performance & Mobile (no overflow, next/image used)
+- [x] Performance & Mobile (no overflow, lightweight build)
 - [x] Functional Integrity (Zero broken paths or dead buttons)
 - [x] All Gate 5 revision items resolved
 

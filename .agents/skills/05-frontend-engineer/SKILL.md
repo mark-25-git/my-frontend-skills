@@ -1,7 +1,7 @@
 ---
 name: frontend-engineer
 description: >
-  Develops production-ready Next.js code locally for the redesign pipeline.
+  Develops production-ready HTML or Vue (Composition API) code locally for the redesign pipeline. Next.js is only used for complex apps with specific SEO/SSR needs.
   Triggers include: "build site," "generate components," "start Gate 3," or "run Gate 4."
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
@@ -21,13 +21,13 @@ description: >
 ## Gate 3 — Scaffolding (Dirty Directory Safe)
 Set up the core architecture following the [frontend-engineering-standards](/.agents/skills/frontend-engineering-standards/SKILL.md).
 
-1. **Windows Standard**: Use the `cmd /c` prefix for all `npx` or `npm` commands.
-2. **Next.js Initialization**:
-   - If the root directory is "dirty" (contains `.agents` or other files), DO NOT run `create-next-app` directly.
-   - **The Scaffold-Move Workflow**: 1. Create `init-temp`. 2. Initialize inside it using exact versions from the Gate 1B log entry. 3. Use `move` or `robocopy` to merge files to the root.
-3. **Theme Initialization**: Update `tailwind.config.js` or `globals.css` with the exact tokens from the Gate 1B log entry. This is the Source of Truth.
-4. **Dependency Installation**: Install exact pinned versions from the Gate 1B manifest. For Next.js 15 / React 19, if installing animation libraries like `framer-motion`, use the `--legacy-peer-deps` flag to prevent version conflicts.
-5. **Image Configuration (Auto-Whitelist)**: Create `next.config.ts` including the hostname of the target URL (from `PROJECT_STATE.md`) in the `remotePatterns` section to prevent "Invalid src prop" errors.
+1. **Framework Selection**: Use the `Stack` defined in `PROJECT_STATE.md` (Gate 1B). If no stack is defined, default to **HTML/Tailwind** for speed or **Vue 3** for interactivity.
+2. **Initialization Workflow**:
+   - **For HTML**: Initialize a clean directory with `index.html`, `main.js`, and `styles.css`. Configure Tailwind CSS.
+   - **For Vue**: Use `cmd /c npm init vue@latest` inside a temp directory, then merge to root.
+   - **For Next.js (Only if approved)**: Use the "Scaffold-Move" workflow to initialize Next.js 15 in a temp directory and merge to root.
+3. **Theme Initialization**: Update the relevant config (e.g., `tailwind.config.js`) with exact hex values from the Gate 1B log.
+4. **Dependency Installation**: Install pinned versions from Gate 1B. Use `cmd /c npm install`.
 
 ### Append to PROJECT_STATE.md after Gate 3
 
@@ -36,9 +36,9 @@ Set up the core architecture following the [frontend-engineering-standards](/.ag
 ## [Gate 3] — Scaffold Complete
 **Role:** Frontend Engineer | **Date:** [YYYY-MM-DD]
 
-- Next.js version: ...
+- Stack: [html / vue / next]
 - Tailwind configured: ✅
-- shadcn/ui initialized: ✅
+- Build tool (Vite/None) initialized: ✅
 - Pinned dependencies installed: ✅
 
 ### Frictions & Preventions
@@ -68,9 +68,12 @@ If the current page is a conversion page (Homepage, Pricing, Landing Page):
 ### 3. Implementation
 - **Visual Integrity**: Follow the Aesthetic Direction and Visual Non-Negotiables from the Gate 1B log entry.
 - **Copy**: Use the exact copy from the Gate 2 log entry in `PROJECT_STATE.md`. No placeholders.
-- **SEO**: Inject metadata from the Gate 1.5 log entry into each page's `export const metadata`.
-- **Stack**: Next.js 15 + Tailwind CSS. Use `shadcn/ui` as a primitive layer only.
-- **Image Resilience**: Use a `SafeImage` component for all external assets. If an image fails to load, it MUST render a styled "Blank Card" (using `bg-muted` and `flex items-center justify-center`) displaying the original `alt` text as a label to maintain UI beauty.
+- **SEO**: Inject metadata from the Gate 1.5 log entry into the page headers or Vue metadata.
+- **Stack-Specific Performance**: 
+    - **HTML**: Keep it semantic and minimal. 
+    - **Vue**: Use **Composition API** and modular components.
+    - **Next.js (Legacy/Complex)**: Use App Router and RSC where applicable.
+- **Image Resilience**: Use a `SafeImage` pattern. If an image fails to load, render a styled "Blank Card" displaying the original `alt` text.
 
 ### 4. Revision Phase
 If a Gate 5 entry exists in `PROJECT_STATE.md` with a revision list:
@@ -97,8 +100,8 @@ Confirm the server is accessible at `http://localhost:3000`, then update the `De
 **Role:** Frontend Engineer | **Date:** [YYYY-MM-DD]
 
 ### Pages Built
-- app/page.tsx (Home)
-- app/[money-page]/page.tsx
+- index.html (or app/page.vue)
+- [money-page]
 - ...
 
 ### Dev Server

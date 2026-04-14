@@ -24,7 +24,7 @@ Visit the Homepage, About page, and any pricing or service page. Extract:
 - Brand tone and language
 
 ### Step 2 — Online Research (Required)
-Search for the business online using whatever sources are most relevant for the industry and business type. The goal is to find real customer opinions, market positioning, and competitive context that the website alone won't reveal.
+Search for the business online using whatever sources are most relevant for the industry and business type. The goal is to find real customer opinions, market positioning, and competitive context that the website alone won't reveal. Identify 1-2 "aesthetic benchmarks"—competitors or leading brands that represent the visual standard the client should aspire to.
 
 Synthesize what you find to build a more accurate customer profile than the website alone would give.
 

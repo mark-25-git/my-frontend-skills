@@ -51,7 +51,7 @@ For each page in the Gate 1B page list, define a unique title tag and meta descr
 - **Required Fields:** ...
 
 ### Handoff
-SEO strategy complete. Copywriter uses keywords for copy. Engineer injects metadata templates into each page's `export const metadata`.
+SEO strategy complete. Copywriter uses keywords for copy. Engineer injects metadata templates into each page's header or metadata configuration.
 ```
 
 ---

@@ -8,17 +8,8 @@ metadata:
 
 You are an expert customer researcher. Your goal is to help uncover what customers actually think, feel, say, and struggle with — so that everything from positioning to product to copy is grounded in reality rather than assumption.
 
-## Step 0 — Industry Calibration (Mandatory)
-Before any research, read `.agents/skills/frontend-design/design-intelligence/industry-rules.md`.
-Match the client's industry to a row in the table. Use the "Market Positioning" and key traits from that row to calibrate your research focus:
-- **For Trust-heavy industries** (Legal, Finance, Medical): prioritize authority signals, risk/fear pains, and credibility objections.
-- **For ROI-driven industries** (SaaS, B2B): prioritize efficiency gains, cost-of-inaction pains, and integration concerns.
-- **For Lifestyle industries** (Wellness, Food, Fashion): prioritize identity, aspiration, and social comparison pains.
-
-This calibration ensures your pain-point extraction is industry-specific, not generic.
-
-**Check for project context first:**
-Read `PROJECT_STATE.md` from top to bottom. The Gate 0.5 client brief entry is your primary source for ICP, tone, and pain-point context. Use that to skip questions already answered.
+## Step 1 — Project Context (Mandatory)
+Before any research, read `PROJECT_STATE.md` from top to bottom. The Gate 0.5 client brief entry is your primary source for ICP, tone, and pain-point context.
 
 
 ---

@@ -15,33 +15,17 @@ description: >
 
 ---
 
-## Step 0 — Aesthetic Direction (Mandatory Design Intelligence Lookup)
+## Step 1 — Aesthetic Research & Direction
+Browse 1-2 websites that embody a high-end, target aesthetic for the brand (e.g., if the user wants "premium minimalism," find examples that define that style). Identify key visual patterns, layout structures, and unique details.
 
-Before choosing any design tokens, read these files in order:
+Commit to a BOLD aesthetic direction based on your research and the Gate 1A audit. State WHY this aesthetic will make the site stand out vs. competitors. Define **3 Visual Non-Negotiables** for the build.
 
-1. `.agents/skills/frontend-design/design-intelligence/industry-rules.md`
-   → Match the client's industry to a row. Extract: recommended style, color mood, typography mood, key effects, anti-patterns.
-
-2. `.agents/skills/frontend-design/design-intelligence/ui-styles.md`
-   → Look up the recommended style for its exact CSS keywords and variables.
-
-3. `.agents/skills/frontend-design/design-intelligence/typography-pairings.md`
-   → Use the "Industry → Typography Quick Map" to select the correct font pairing.
-
-4. `.agents/skills/frontend-design/design-intelligence/landing-patterns.md`
-   → Use the "Industry → Landing Pattern Quick Map" to determine the correct page structure.
-
-Then commit ONE bold aesthetic direction. State WHY this aesthetic will make the site stand out vs. competitors. Define **3 Visual Non-Negotiables** for the build.
-
----
-
-## Step 1 — Define the Design System
-Based on the audit and Step 0, define the Tailwind theme extension with exact hex values (which will be converted to named tokens in `tailwind.config.js`).
+Define the Tailwind theme extension with exact hex values (which will be converted to named tokens in `tailwind.config.js`).
 
 ---
 
 ## Step 1.5 — Dependency Manifest
-Define exact major/minor versions for all core libraries (e.g., `next@15.0.0`, `lucide-react@0.454.0`). These pinned versions MUST be used in Gate 3.
+Define exact major/minor versions for all core libraries (e.g., `vue@3.x.x`, `tailwindcss@3.x.x`). These pinned versions MUST be used in Gate 3.
 
 ---
 
@@ -64,7 +48,7 @@ List the core components needed (e.g., Navbar, Footer, Hero, ServiceCard).
 
 ### Design Brief
 - **Industry:** ...
-- **Recommended Style:** [from industry-rules.md]
+- **Recommended Style:** ...
 - **Chosen Aesthetic:** ...
 - **Justification:** ...
 - **Visual Non-Negotiables:** Rule 1 / Rule 2 / Rule 3
@@ -86,8 +70,8 @@ fontFamily: {
 ```
 
 ### Dependency Manifest
-- next@15.x.x
-- lucide-react@x.x.x
+- html/css/js (Core) or vue@3.x.x
+- tailwindcss@3.x.x
 - [other pinned deps]
 
 ### Page List (Priority Order)

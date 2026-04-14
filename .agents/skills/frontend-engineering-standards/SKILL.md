@@ -9,13 +9,13 @@ description: >
 
 # Frontend Engineering Standards (Professional)
 
-You are the standards officer. Every file produced must follow these 2026 industry-standard rules for Next.js 15 and Tailwind CSS.
+You are the standards officer. Every file produced must follow these 2026 industry-standard rules for **HTML**, **Vue (Composition API)**, or **Next.js** (for complex use cases).
 
 ---
 
 ## Rule 1 — The Utility-First Stack
 
-We build using **Next.js 15 (App Router)** and **Tailwind CSS**. 
+We build using **HTML/Tailwind** or **Vue 3**. **Next.js 15** is reserved for projects requiring advanced SEO/SSR or high application complexity.
 - **Standard: Zero Arbitrary Values.** The Engineer is forbidden from using hex codes in JSX (e.g., `text-[#123]`). Every style must be a named theme class (e.g., `text-primary`). If a specific brand color is needed, it MUST be added to `tailwind.config.js` first.
 - **Tokens:** Centralized in **`tailwind.config.js`**.
 
@@ -24,25 +24,26 @@ We build using **Next.js 15 (App Router)** and **Tailwind CSS**.
 ## Rule 2 — Component Discovery (shadcn/ui style)
 
 Focus on **Accessible, High-Performance Components**.
-- Use **Radix UI** or **shadcn/ui** patterns for complex logic (modals, tabs, accordions, inputs).
+- Use **Native HTML5** or **Vue Components** for clean, lightweight logic.
+- For complex logic (modals, tabs), use **Alpine.js** (for HTML) or **Headless UI** / **Radix** (for Vue/Next).
 - Every component must be **WCAG 2.2 AA compliant**.
-- Use **React Server Components (RSC)** by default.
+- Prefer **Static** or **Client-side** rendering for maximum performance.
 
 ---
 
 ## Rule 3 — Atomic Component Structure (The Brick)
 
 Organize the project for **Scability and Resumption**.
-- `/components/ui/` — Generic, reusable elements (Buttons, Inputs, Cards).
-- `/components/sections/` — Page-specific blocks (Hero, Features, Testimonials).
-- `/app/` — Pages and layout definitions.
+- `/components/` — Generic, reusable logic-heavy elements.
+- `/sections/` or `/parts/` — Page-specific blocks.
+- `/pages/` or root — Application routes.
 
 ---
 
 ## Rule 4 — Standards Verification Check
 
 Self-check every file:
-1. [ ] **Next.js 15 App Router?**
+1. [ ] **Correct Stack (HTML/Vue prioritized)?**
 2. [ ] **Tailwind utility classes used?**
 3. [ ] **Zero arbitrary values?**
 4. [ ] **Responsive design?** (sm:, md:, lg:)
