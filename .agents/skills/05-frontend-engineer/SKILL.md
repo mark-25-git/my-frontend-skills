@@ -8,13 +8,13 @@ description: >
 
 # Gate 3 & 4 — Engineering Protocol
 
-**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. Your inputs are:
+**FIRST ACTION:** Read `PROJECT_STATE.md` from top to bottom. Your inputs are:
 - Gate 1B: Design system tokens, dependency manifest, page list, component inventory, visual non-negotiables
 - Gate 1.5: SEO metadata templates to inject per page
 - Gate 2: Final copy to populate all page content
 - Gate 5 (if exists): Revision list to implement
 
-**PRE-CONDITION:** `gate_2.status` must be `approved` in `project-state.json`.
+**PRE-CONDITION:** Gate 2 must be `approved` or `complete` in `PROJECT_STATE.md`.
 
 ---
 
@@ -25,11 +25,11 @@ Set up the core architecture following the [frontend-engineering-standards](/.ag
 2. **Next.js Initialization**:
    - If the root directory is "dirty" (contains `.agents` or other files), DO NOT run `create-next-app` directly.
    - **The Scaffold-Move Workflow**: 1. Create `init-temp`. 2. Initialize inside it using exact versions from the Gate 1B log entry. 3. Use `move` or `robocopy` to merge files to the root.
-3. **Theme Initialization**: Update `tailwind.config.js` with the exact tokens from the Gate 1B log entry. This is the Source of Truth.
+3. **Theme Initialization**: Update `tailwind.config.js` or `globals.css` with the exact tokens from the Gate 1B log entry. This is the Source of Truth.
 4. **Dependency Installation**: Install exact pinned versions from the Gate 1B manifest. For Next.js 15 / React 19, if installing animation libraries like `framer-motion`, use the `--legacy-peer-deps` flag to prevent version conflicts.
-5. **Image Configuration (Auto-Whitelist)**: Create `next.config.ts` including the hostname of the target URL (from `project-state.json`) in the `remotePatterns` section to prevent "Invalid src prop" errors.
+5. **Image Configuration (Auto-Whitelist)**: Create `next.config.ts` including the hostname of the target URL (from `PROJECT_STATE.md`) in the `remotePatterns` section to prevent "Invalid src prop" errors.
 
-### Append to PROJECT_LOG.md after Gate 3
+### Append to PROJECT_STATE.md after Gate 3
 
 ```markdown
 ---
@@ -54,7 +54,7 @@ Scaffold ready. Proceeding to Gate 4 full build.
 Build pages in the priority order from the Gate 1B log entry.
 
 ### 1. Resumption Check
-Check `gates.gate_4.completed_files` in `project-state.json`. **DO NOT** rebuild files already recorded there.
+Check the "Completed Files" list in `PROJECT_STATE.md`. **DO NOT** rebuild files already recorded there.
 
 ### 2. JIT Deep Scrape (Asset Reporting)
 For each page, perform a "Deep Scrape" of the original URL.
@@ -67,16 +67,16 @@ If the current page is a conversion page (Homepage, Pricing, Landing Page):
 
 ### 3. Implementation
 - **Visual Integrity**: Follow the Aesthetic Direction and Visual Non-Negotiables from the Gate 1B log entry.
-- **Copy**: Use the exact copy from the Gate 2 log entry. No placeholders.
+- **Copy**: Use the exact copy from the Gate 2 log entry in `PROJECT_STATE.md`. No placeholders.
 - **SEO**: Inject metadata from the Gate 1.5 log entry into each page's `export const metadata`.
 - **Stack**: Next.js 15 + Tailwind CSS. Use `shadcn/ui` as a primitive layer only.
 - **Image Resilience**: Use a `SafeImage` component for all external assets. If an image fails to load, it MUST render a styled "Blank Card" (using `bg-muted` and `flex items-center justify-center`) displaying the original `alt` text as a label to maintain UI beauty.
 
 ### 4. Revision Phase
-If a Gate 5 entry exists in `PROJECT_LOG.md` with a revision list:
+If a Gate 5 entry exists in `PROJECT_STATE.md` with a revision list:
 1. Read every revision item.
 2. Implement all changes in `/components/sections/` or `/app/`.
-3. Append a new Gate 4 (Revision) entry to the log when done.
+3. Append a new Gate 4 (Revision) entry to `PROJECT_STATE.md` when done.
 
 ---
 
@@ -87,13 +87,9 @@ After all pages are built (or revisions implemented), run:
 cmd /c npm run dev
 ```
 
-Confirm the server is accessible at `http://localhost:3000`, then update `project-state.json`:
+Confirm the server is accessible at `http://localhost:3000`, then update the `Dev Server` field in `PROJECT_STATE.md`.
 
-```json
-{ "dev_server": "http://localhost:3000" }
-```
-
-### Append to PROJECT_LOG.md after Gate 4
+### Append to PROJECT_STATE.md after Gate 4
 
 ```markdown
 ---
@@ -121,16 +117,10 @@ All pages built. Dev server running. Passing to Visual Director for Gate 5 audit
 ---
 
 ## Pipeline Reporting
-Update `project-state.json` after **every** file is written:
+Update `PROJECT_STATE.md` after **every** file is written:
 
-```json
-{
-  "gates": {
-    "gate_4": {
-      "status": "in_progress",
-      "completed_files": ["app/layout.tsx", "components/sections/Hero.tsx"]
-    }
-  }
-}
-```
-Once all pages are done and dev server is confirmed, set `gate_4.status` to `"complete"` and notify the PM.
+Change the Gate 4 status to:
+`- [ ] **Gate 4**: in_progress`
+
+And update the "Completed Files" list in the Gate Details section.
+Once all pages are done and dev server is confirmed, set `Gate 4` status to `complete` (check the box `[x]`) and notify the PM.

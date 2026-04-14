@@ -8,7 +8,7 @@ description: >
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
 
-**FIRST ACTION (any gate):** Read `PROJECT_LOG.md` from top to bottom before doing any work.
+**FIRST ACTION (any gate):** Read `PROJECT_STATE.md` from top to bottom before doing any work.
 
 ---
 
@@ -28,10 +28,10 @@ Search for the business online using whatever sources are most relevant for the 
 
 Synthesize what you find to build a more accurate customer profile than the website alone would give.
 
-### Step 3 — Append to PROJECT_LOG.md
-Add this entry at the bottom of `PROJECT_LOG.md`. 
+### Step 3 — Append to PROJECT_STATE.md
+Add this entry at the bottom of `PROJECT_STATE.md`. 
 
-**Creation Rule**: If this is a new project and `PROJECT_LOG.md` does not yet exist, use `write_to_file` to create the file.
+**Creation Rule**: If this is a new project and `PROJECT_STATE.md` does not yet exist, use `write_to_file` to create the file.
 
 ```markdown
 ---
@@ -78,7 +78,7 @@ Report: "Gate 0.5 complete. Please review the client brief above and confirm bef
 
 Consult `marketing-pro-seo-audit` and `marketing-pro-customer-research` to populate the Marketing Intelligence section.
 
-### Append to PROJECT_LOG.md
+### Append to PROJECT_STATE.md
 
 ```markdown
 ---

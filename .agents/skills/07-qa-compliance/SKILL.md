@@ -8,16 +8,16 @@ description: >
 
 # Gate 6 — Final QA Audit
 
-**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. Your inputs are:
+**FIRST ACTION:** Read `PROJECT_STATE.md` from top to bottom. Your inputs are:
 - Gate 1.5: Expected metadata and schema requirements
 - Gate 5: Confirm all revision items are resolved before signing off
 
-**PRE-CONDITION:** `gate_5.status` must be `approved` in `project-state.json`.
+**PRE-CONDITION:** Gate 5 status must be `complete` in `PROJECT_STATE.md`.
 
 ---
 
 ## Step 0 — Read the Stack
-Check `project-state.json` for the `stack` field before running compliance checks.
+Check `PROJECT_STATE.md` for the `Stack` field before running compliance checks.
 
 - **If `stack` is `next@15`**: Run the full Tailwind/shadcn checklist below.
 - **If different**: Adapt checks to match the declared stack. Do not report false failures.
@@ -29,13 +29,13 @@ Check `project-state.json` for the `stack` field before running compliance check
 For Next.js 15 + Tailwind CSS:
 - **Utility Classes:** Zero Vanilla CSS files. All styles are Tailwind utility classes.
 - **Tokens:** Zero hex codes in JSX. All colors use named theme classes (e.g., `text-primary`).
-- **Accessibility:** All shadcn/Radix components have correct ARIA attributes.
+- **Accessibility:** All UI components have correct ARIA attributes.
 - **Component Structure:** Files organized per `frontend-engineering-standards` (`/components/ui/`, `/components/sections/`, `/app/`).
 
 ---
 
 ## Step 2 — SEO & AEO Verification
-Cross-check against the Gate 1.5 log entry:
+Cross-check against the Gate 1.5 entry in `PROJECT_STATE.md`:
 - **Metadata:** Every page has a unique title and meta description matching the Gate 1.5 templates.
 - **Schema:** JSON-LD scripts are present and populated with real client data (no placeholder text).
 
@@ -49,7 +49,7 @@ Cross-check against the Gate 1.5 log entry:
 ---
 
 ## Step 4 — Visual Revision Confirmation
-Check the Gate 5 revision list in `PROJECT_LOG.md`. Confirm every `- [ ]` item has been addressed in a subsequent Gate 4 (Revision) log entry.
+Check the Gate 5 revision list in `PROJECT_STATE.md`. Confirm every `- [ ]` item has been addressed in a subsequent Gate 4 (Revision) log entry.
 
 ---
 
@@ -61,7 +61,7 @@ Perform a exhaustive "Click-Through Audit" of the entire site:
 
 ---
 
-## Append to PROJECT_LOG.md
+## Append to PROJECT_STATE.md
 
 ```markdown
 ---
@@ -86,18 +86,14 @@ QA passed. Pipeline complete.
 ---
 
 ## Pipeline Reporting
-Update `project-state.json`:
+Update `PROJECT_STATE.md`:
 
-```json
-{
-  "gates": {
-    "gate_6": {
-      "status": "complete",
-      "qa_passed": true,
-      "completed_at": "YYYY-MM-DD",
-      "message": "Final QA passed. Sign-off appended to PROJECT_LOG.md."
-    }
-  }
-}
+Change the Gate 6 status to:
+`- [x] **Gate 6**: complete`
+
+And update the Gate Details section for Gate 6:
+```markdown
+**Gate 6 (Final QA)**
+- QA Result: Final QA passed. Sign-off appended to PROJECT_STATE.md.
 ```
 Then notify the PM.

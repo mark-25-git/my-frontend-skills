@@ -20,7 +20,7 @@ This ensures your recommendations are calibrated to the industry, not a generic 
 
 ## Initial Assessment
 **Check for project context next:**
-Read `PROJECT_LOG.md` from top to bottom. The Gate 0.5 and Gate 1A entries contain the ICP, conversion goal, and friction points. Use that context and only ask for information not already covered.
+Read `PROJECT_STATE.md` from top to bottom. The Gate 0.5 and Gate 1A entries contain the ICP, conversion goal, and friction points. Use that context and only ask for information not already covered.
 
 
 1. **Page Type**: Homepage, landing page, pricing, feature, blog, etc.

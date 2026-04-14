@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0F0F0F;
+    --foreground: #F5F5F5;
+    --primary: #F5A623;
+    --surface: #1A1A1A;
+    --surface-2: #242424;
+    --muted: #6B7280;
+    --border: #2A2A2A;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer components {
+  /* Syne is display font, Manrope is body font */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}

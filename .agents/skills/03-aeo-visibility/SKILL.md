@@ -9,9 +9,9 @@ description: >
 
 # Gate 1.5 — SEO & Visibility Strategy
 
-**FIRST ACTION:** Read `PROJECT_LOG.md` from top to bottom. The Gate 1B entry is your primary input — use the chosen industry, ICP, and page list to inform keyword selection.
+**FIRST ACTION:** Read `PROJECT_STATE.md` from top to bottom. The Gate 1B entry is your primary input — use the chosen industry, ICP, and page list to inform keyword selection.
 
-**PRE-CONDITION:** Gate 1B entry must exist in `PROJECT_LOG.md` with `gate_1.status` = `approved`.
+**PRE-CONDITION:** Gate 1B entry must exist in `PROJECT_STATE.md`.
 
 ---
 
@@ -28,7 +28,7 @@ For each page in the Gate 1B page list, define a unique title tag and meta descr
 
 ---
 
-## Append to PROJECT_LOG.md
+## Append to PROJECT_STATE.md
 
 ```markdown
 ---
@@ -57,16 +57,14 @@ SEO strategy complete. Copywriter uses keywords for copy. Engineer injects metad
 ---
 
 ## Pipeline Reporting
-Update `project-state.json`:
+Update `PROJECT_STATE.md`:
 
-```json
-{
-  "gates": {
-    "gate_1_5": {
-      "status": "approved",
-      "seo_strategy": "Strategy appended to PROJECT_LOG.md."
-    }
-  }
-}
+Change the Gate 1.5 status to:
+- [x] **Gate 1.5**: approved
+
+And update the Gate Details section for Gate 1.5:
+```markdown
+**Gate 1.5 (SEO & Visibility)**
+- Strategy Result: Strategy appended to PROJECT_STATE.md.
 ```
 Then notify the PM.
