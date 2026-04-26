@@ -19,18 +19,18 @@ description: >
 ## Step 0 — Read the Stack
 Check `PROJECT_STATE.md` for the `Stack` field before running compliance checks.
 
-- **If `stack` is `next`**: Run the Next.js/Tailwind checklist.
-- **If `stack` is `html` or `vue`**: Prioritize semantic HTML, CSS-only animations (where possible), and Composition API usage.
+- **If `stack` is `html`**: Prioritize semantic HTML, CSS-only animations (where possible).
+- **If `stack` is `next`**: Ensure App Router best practices, Server Components, and optimized Next.js components (e.g., `next/image`).
 
 ---
 
 ## Step 1 — Technical Compliance
 
-For HTML or Vue + Tailwind CSS:
+For HTML + Tailwind CSS:
 - **Utility Classes:** Zero Vanilla CSS files (exceptions for mandatory global resets).
 - **Tokens:** Zero hex codes in markup/JSX. All colors use named theme classes.
 - **Accessibility:** All UI components have correct ARIA attributes and semantic nesting.
-- **Component Structure:** Files organized logically (e.g., `/components/` for Vue, separate `.html` and `.js` for static).
+- **Component Structure:** Files organized logically (e.g., `/components/` for Next.js, separate `.html` and `.js` for static).
 
 ---
 
@@ -69,7 +69,7 @@ Perform a exhaustive "Click-Through Audit" of the entire site:
 **Role:** QA Compliance | **Date:** [YYYY-MM-DD]
 
 ### Checklist
-- [x] Technical Standard (Tailwind-based — stack: [html/vue/next])
+- [x] Technical Standard (Tailwind-based — stack: [html/next])
 - [x] SEO/AEO Verification (unique metadata + JSON-LD matching Gate 1.5)
 - [x] Accessibility (WCAG 2.2 AA)
 - [x] Performance & Mobile (no overflow, lightweight build)

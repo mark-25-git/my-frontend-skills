@@ -9,13 +9,13 @@ description: >
 
 # Frontend Engineering Standards (Professional)
 
-You are the standards officer. Every file produced must follow these 2026 industry-standard rules for **HTML**, **Vue (Composition API)**, or **Next.js** (for complex use cases).
+You are the standards officer. Every file produced must follow these 2026 industry-standard rules for **HTML** (for 1-page sites) or **Next.js 15** (for multi-page sites).
 
 ---
 
 ## Rule 1 — The Utility-First Stack
 
-We build using **HTML/Tailwind** or **Vue 3**. **Next.js 15** is reserved for projects requiring advanced SEO/SSR or high application complexity.
+We build using **HTML/Tailwind** for single-page sites and **Next.js 15** for all multi-page sites.
 - **Standard: Zero Arbitrary Values.** The Engineer is forbidden from using hex codes in JSX (e.g., `text-[#123]`). Every style must be a named theme class (e.g., `text-primary`). If a specific brand color is needed, it MUST be added to `tailwind.config.js` first.
 - **Tokens:** Centralized in **`tailwind.config.js`**.
 
@@ -24,8 +24,8 @@ We build using **HTML/Tailwind** or **Vue 3**. **Next.js 15** is reserved for pr
 ## Rule 2 — Component Discovery (shadcn/ui style)
 
 Focus on **Accessible, High-Performance Components**.
-- Use **Native HTML5** or **Vue Components** for clean, lightweight logic.
-- For complex logic (modals, tabs), use **Alpine.js** (for HTML) or **Headless UI** / **Radix** (for Vue/Next).
+- Use **Native HTML5** or **Next.js Components** for clean, lightweight logic.
+- For complex logic (modals, tabs), use **Alpine.js** (for HTML) or **Radix UI** / **Headless UI** (for Next.js).
 - Every component must be **WCAG 2.2 AA compliant**.
 - Prefer **Static** or **Client-side** rendering for maximum performance.
 
@@ -43,7 +43,7 @@ Organize the project for **Scability and Resumption**.
 ## Rule 4 — Standards Verification Check
 
 Self-check every file:
-1. [ ] **Correct Stack (HTML/Vue prioritized)?**
+1. [ ] **Correct Stack (HTML for 1-page, Next.js for multi)?**
 2. [ ] **Tailwind utility classes used?**
 3. [ ] **Zero arbitrary values?**
 4. [ ] **Responsive design?** (sm:, md:, lg:)

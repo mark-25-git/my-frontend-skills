@@ -25,7 +25,7 @@ Define the Tailwind theme extension with exact hex values (which will be convert
 ---
 
 ## Step 1.5 — Dependency Manifest
-Define exact major/minor versions for all core libraries (e.g., `vue@3.x.x`, `tailwindcss@3.x.x`). These pinned versions MUST be used in Gate 3.
+Define exact major/minor versions for all core libraries (e.g., `next@15.x.x`, `tailwindcss@3.x.x`). These pinned versions MUST be used in Gate 3.
 
 ---
 
@@ -70,7 +70,7 @@ fontFamily: {
 ```
 
 ### Dependency Manifest
-- html/css/js (Core) or vue@3.x.x
+- html/css/js (for 1-page) or nextjs@15.x.x (for >1-page)
 - tailwindcss@3.x.x
 - [other pinned deps]
 

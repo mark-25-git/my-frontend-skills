@@ -1,7 +1,7 @@
 ---
 name: frontend-engineer
 description: >
-  Develops production-ready HTML or Vue (Composition API) code locally for the redesign pipeline. Next.js is only used for complex apps with specific SEO/SSR needs.
+  Develops production-ready HTML (for 1-page sites) or Next.js 15 (for multi-page sites) code locally for the redesign pipeline.
   Triggers include: "build site," "generate components," "start Gate 3," or "run Gate 4."
   Follows the standards in @[/.agents/protocols/agency-foundation.md].
 ---
@@ -21,11 +21,10 @@ description: >
 ## Gate 3 — Scaffolding (Dirty Directory Safe)
 Set up the core architecture following the [frontend-engineering-standards](/.agents/skills/frontend-engineering-standards/SKILL.md).
 
-1. **Framework Selection**: Use the `Stack` defined in `PROJECT_STATE.md` (Gate 1B). If no stack is defined, default to **HTML/Tailwind** for speed or **Vue 3** for interactivity.
+1. **Framework Selection**: Use the `Stack` defined in `PROJECT_STATE.md` (Gate 1B). If no stack is defined, use **HTML/Tailwind** ONLY if the site has 1 page. For all multi-page sites, you MUST use **Next.js 15**.
 2. **Initialization Workflow**:
-   - **For HTML**: Initialize a clean directory with `index.html`, `main.js`, and `styles.css`. Configure Tailwind CSS.
-   - **For Vue**: Use `cmd /c npm init vue@latest` inside a temp directory, then merge to root.
-   - **For Next.js (Only if approved)**: Use the "Scaffold-Move" workflow to initialize Next.js 15 in a temp directory and merge to root.
+   - **For HTML (1-page)**: Initialize a clean directory with `index.html`, `main.js`, and `styles.css`. Configure Tailwind CSS.
+   - **For Next.js (>1-page)**: Use the "Scaffold-Move" workflow to initialize Next.js 15 in a temp directory and merge to root. Configure App Router.
 3. **Theme Initialization**: Update the relevant config (e.g., `tailwind.config.js`) with exact hex values from the Gate 1B log.
 4. **Dependency Installation**: Install pinned versions from Gate 1B. Use `cmd /c npm install`.
 
@@ -36,7 +35,7 @@ Set up the core architecture following the [frontend-engineering-standards](/.ag
 ## [Gate 3] — Scaffold Complete
 **Role:** Frontend Engineer | **Date:** [YYYY-MM-DD]
 
-- Stack: [html / vue / next]
+- Stack: [html / next]
 - Tailwind configured: ✅
 - Build tool (Vite/None) initialized: ✅
 - Pinned dependencies installed: ✅
@@ -71,8 +70,7 @@ If the current page is a conversion page (Homepage, Pricing, Landing Page):
 - **SEO**: Inject metadata from the Gate 1.5 log entry into the page headers or Vue metadata.
 - **Stack-Specific Performance**: 
     - **HTML**: Keep it semantic and minimal. 
-    - **Vue**: Use **Composition API** and modular components.
-    - **Next.js (Legacy/Complex)**: Use App Router and RSC where applicable.
+    - **Next.js**: Use App Router, Server Components (RSC), and modular components. Use `next/image` for optimization.
 - **Image Resilience**: Use a `SafeImage` pattern. If an image fails to load, render a styled "Blank Card" displaying the original `alt` text.
 
 ### 4. Revision Phase
@@ -100,7 +98,7 @@ Confirm the server is accessible at `http://localhost:3000`, then update the `De
 **Role:** Frontend Engineer | **Date:** [YYYY-MM-DD]
 
 ### Pages Built
-- index.html (or app/page.vue)
+- index.html (or app/page.tsx)
 - [money-page]
 - ...
 

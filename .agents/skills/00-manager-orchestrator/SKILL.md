@@ -101,7 +101,7 @@ Always check the "Completed Files" list in `PROJECT_STATE.md` before re-engaging
 ## State Schema Reference
 `PROJECT_STATE.md` fields that matter for orchestration:
 - **URL**: The target website.
-- **Stack**: The tech stack in use (e.g., `html/tailwind` or `vue`).
+- **Stack**: The tech stack in use (e.g., `html` for 1-page sites, `next` for multi-page sites).
 - **Dev Server**: URL of the running local server.
 - **Gate checkboxes**: `[ ]` means incomplete, `[x]` means completed. Look at the status label to check if it's `pending` or `in_progress`.
 - **Blocked**: If `true`, stop everything and report to the user.

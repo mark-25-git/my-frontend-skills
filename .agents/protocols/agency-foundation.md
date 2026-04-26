@@ -18,7 +18,7 @@ This protocol defines the communication and engineering standards for all agents
 - **Strictly Requested Only**: Do not add extra features or guardrails unless explicitly requested.
 - **Contextual Awareness**: You MUST read the entire file before making any edits. Never modify even a single line of code without fully understanding the current context of the file.
 - **Standard Enforcement Overrides**: Always prioritize industry-standard design patterns and "Clean Code" principles over "hacky" solutions.
-- **Modular "Brick" Construction**: Code must be modular and performant. Prioritize **HTML/Tailwind** or **Vue (Composition API)** for marketing sites and landing pages to ensure lightweight builds. Only use **Next.js** if there is a specific technical reason (SEO/SSR, complex backend, or large-scale data).
+- **Modular "Brick" Construction**: Code must be modular and performant. Use **HTML/Tailwind** ONLY for single-page websites. For any website with more than one page, you MUST use **Next.js**.
 - **Minimalist "Why-Only" Comments**: Comments must only explain the non-obvious "WHY." No standard documentation comments.
 - **Security-First**: Implementation must be production-ready (sanitized inputs, environment variables, secure headers).
 - **Zero Arbitrary Values**: All styling must use named Tailwind theme classes. (No hardcoded hex in JSX).
