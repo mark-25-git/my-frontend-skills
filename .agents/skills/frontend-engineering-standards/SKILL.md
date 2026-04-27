@@ -60,5 +60,7 @@ Self-check every file:
 Every component MUST be generated with an artisanal, non-generic finish.
 1. **No Ping/Bounce Slop**: Never use `animate-ping` for badges or `animate-bounce` for background circles. These signal "templated AI."
 2. **No FULL CAPS**: All copy, badges, and titles must use Title Case or Sentence Case. NO all-caps permitted per user preference.
-3. **Professional Footers**: Never generate "Made with [heart]" footers. Use brand-appropriate professional attribution.
-4. **Purposeful Badges**: Only use badges when they represent real meta-data or status. Avoid using "upper-case, bold, high-contrast" badges just to fill space.
+3. **No Pill-Shaped Badges/Tags**: Never use pill-shaped border-rounding for badges or tags. These are considered overused "AI-standard" aesthetics. Note: Pill-shaped buttons are permitted.
+4. **Professional Footers**: Never generate "Made with [heart]" footers. Use brand-appropriate professional attribution.
+5. **Purposeful Badges**: Only use badges when they represent real meta-data or status. Avoid using "upper-case, bold, high-contrast" badges just to fill space.
+

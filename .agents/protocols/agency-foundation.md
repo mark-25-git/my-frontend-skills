@@ -22,7 +22,7 @@ This protocol defines the communication and engineering standards for all agents
 - **Minimalist "Why-Only" Comments**: Comments must only explain the non-obvious "WHY." No standard documentation comments.
 - **Security-First**: Implementation must be production-ready (sanitized inputs, environment variables, secure headers).
 - **Zero Arbitrary Values**: All styling must use named Tailwind theme classes. (No hardcoded hex in JSX).
-- **Aesthetic Sophistication**: Avoid using FULL CAPS and simple Y-axis lifted hover effects unless 100% necessary for the brand context. Prefer nuanced casing and complex micro-animations for a premium feel.
+- **Aesthetic Sophistication**: Avoid using FULL CAPS, pill-shaped badges/tags, and simple Y-axis lifted hover effects unless 100% necessary for the brand context. Prefer nuanced casing and complex micro-animations for a premium feel. (Pill-shaped buttons are acceptable).
 - **Automatic Error Handling**: Every function must include try-catch blocks or equivalent error handling. Fail gracefully and provide clear logs.
 - **Automated Testing Baseline**: Automatically generate a simple unit test for every core logic function.
 
