@@ -64,12 +64,22 @@ For each page, perform a "Deep Scrape" of the original URL.
 If the current page is a conversion page (Homepage, Pricing, Landing Page):
 - Consult `marketing-pro-page-cro` to audit the proposed component layout against visual hierarchy and CTA prominence rules.
 
+### 2.6 v0 Visual Draft (Early Feedback)
+Before building full components, create a "viewable v0" draft (e.g., `index-v0.html`). 
+- Focus on: Core layout, typography scale, and color distribution from the blueprint.
+- Content: Use high-fidelity placeholders (e.g., `[image 16:9]`, `[icon]`, `[money copy]`) instead of final content.
+- Purpose: Let the user confirm the "Aesthetic Direction" before you spend time on full implementation.
+
 ### 3. Implementation
+- **Blueprint Fidelity**: Adhere strictly to the design patterns (shadows, spacing, OpenType features) of the selected blueprint in `.agents/references/v2-premium-design/blueprints/`.
+- **Toolkit Usage**: Proactively use components from `.agents/references/v2-premium-design/toolkit/advanced-patterns.md`. 
+    - Always include a **Tweaks Panel** for live parameter adjustment.
+    - Use **Device Frames** for mobile/browser mockup presentations.
 - **Visual Integrity**: Follow the Aesthetic Direction and Visual Non-Negotiables from the Gate 1B log entry.
-- **Copy**: Use the exact copy from the Gate 2 log entry in `PROJECT_STATE.md`. No placeholders.
-- **SEO**: Inject metadata from the Gate 1.5 log entry into the page headers or Vue metadata.
+- **Copy**: Use the exact copy from the Gate 2 log entry in `PROJECT_STATE.md`. No placeholders (after v0 is approved).
+- **SEO**: Inject metadata from the Gate 1.5 log entry into the page headers.
 - **Stack-Specific Performance**: 
-    - **HTML**: Keep it semantic and minimal. 
+    - **HTML**: Keep it semantic and minimal. Use `oklch()` for colors and `clamp()` for fluid typography.
     - **Next.js**: Use App Router, Server Components (RSC), and modular components. Use `next/image` for optimization.
 - **Image Resilience**: Use a `SafeImage` pattern. If an image fails to load, render a styled "Blank Card" displaying the original `alt` text.
 

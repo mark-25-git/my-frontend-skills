@@ -34,12 +34,18 @@ Use `read_browser_page` on the `Dev Server` URL (e.g., `http://localhost:3000`).
 ---
 
 ## Step 2 — Audit Against These Criteria
-1. **Visual Hierarchy**: Does the primary CTA stand out immediately? Is there a clear above-the-fold value proposition?
-2. **Consistency**: Same design language for all buttons? Consistent font pairings across sections?
-3. **Responsive Flow**: Correct stacking on mobile? No horizontal overflow?
-4. **Interactive States**: Hover effects, focus states, transitions — do they feel premium?
-5. **Functional Integrity**: Are all buttons and links connected? (No broken paths or dead buttons).
-6. **Aesthetic WOW Factor**: Does the build match the Visual Non-Negotiables from Gate 1B?
+1. **Blueprint Fidelity**: Does the build match the core patterns (shadows, spacing, typography) of the selected blueprint in `.agents/references/v2-premium-design/blueprints/`?
+2. **Anti-AI Checklist**: 
+    - ❌ No purple-pink-blue gradients?
+    - ❌ No left-border accent cards?
+    - ❌ No overused Inter/Roboto fonts?
+    - ❌ No generic emojis used as icons?
+3. **Visual Hierarchy**: Does the primary CTA stand out immediately? Is there a clear above-the-fold value proposition?
+4. **Consistency**: Same design language for all buttons? Consistent font pairings across sections?
+5. **Responsive Flow**: Correct stacking on mobile? No horizontal overflow?
+6. **Interactive States**: Hover effects, focus states, transitions — do they feel premium? 
+7. **Functional Integrity**: Are all buttons and links connected? (No broken paths or dead buttons).
+8. **Aesthetic WOW Factor**: Does the build match the Visual Non-Negotiables from Gate 1B? Does it use the **Toolkit** components (Tweaks, Frames) effectively?
 
 ---
 

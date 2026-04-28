@@ -23,6 +23,11 @@ This protocol defines the communication and engineering standards for all agents
 - **Security-First**: Implementation must be production-ready (sanitized inputs, environment variables, secure headers).
 - **Zero Arbitrary Values**: All styling must use named Tailwind theme classes. (No hardcoded hex in JSX).
 - **Aesthetic Sophistication**: Avoid using FULL CAPS, pill-shaped badges/tags, and simple Y-axis lifted hover effects unless 100% necessary for the brand context. Prefer nuanced casing and complex micro-animations for a premium feel. (Pill-shaped buttons are acceptable).
+- **Premium Design Standard (V2)**: ALL builds must aim for "Stunning" visual quality, not just functionality.
+    - **Blueprint Adoption**: For every project, a design blueprint MUST be selected from `.agents/references/v2-premium-design/blueprints/`.
+    - **Anti-AI Clichés**: Actively avoid telltale AI patterns: purple-pink gradients, left-border accents, and overreliance on Inter/Roboto fonts.
+    - **Placeholder Philosophy**: Use professional placeholders (e.g., `[icon]`, `16:9 image`) instead of poor-quality SVGs or generic emojis.
+    - **Toolkit Usage**: Use the advanced components in `.agents/references/v2-premium-design/toolkit/` (Tweaks Panel, Device Frames, Motion Engine) for all builds.
 - **Automatic Error Handling**: Every function must include try-catch blocks or equivalent error handling. Fail gracefully and provide clear logs.
 - **Automated Testing Baseline**: Automatically generate a simple unit test for every core logic function.
 
