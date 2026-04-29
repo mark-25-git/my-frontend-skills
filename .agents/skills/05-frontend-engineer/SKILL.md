@@ -26,7 +26,8 @@ Set up the core architecture following the [frontend-engineering-standards](/.ag
    - **For HTML (1-page)**: Initialize a clean directory with `index.html`, `main.js`, and `styles.css`. Configure Tailwind CSS.
    - **For Next.js (>1-page)**: Use the "Scaffold-Move" workflow to initialize Next.js 15 in a temp directory and merge to root. Configure App Router.
 3. **Theme Initialization**: Update the relevant config (e.g., `tailwind.config.js`) with exact hex values from the Gate 1B log.
-4. **Dependency Installation**: Install pinned versions from Gate 1B. Use `cmd /c npm install`.
+4. **Next.js 15 Styling Guard**: If using Next.js 15 with a Tailwind 3 blueprint (standard for agency projects), you MUST immediately update `postcss.config.mjs` to use `tailwindcss` and `autoprefixer` instead of `@tailwindcss/postcss`. Failure to do this will result in broken, unstyled pages.
+5. **Dependency Installation**: Install pinned versions from Gate 1B. Ensure `autoprefixer` is included if using Tailwind 3. Use `cmd /c npm install`.
 
 ### Append to PROJECT_STATE.md after Gate 3
 
@@ -88,6 +89,12 @@ If a Gate 5 entry exists in `PROJECT_STATE.md` with a revision list:
 1. Read every revision item.
 2. Implement all changes in `/components/sections/` or `/app/`.
 3. Append a new Gate 4 (Revision) entry to `PROJECT_STATE.md` when done.
+
+### Visual Recovery Protocol
+If the Visual Audit (Gate 5) reveals "Broken Styles" (plain text, blue links, no colors):
+1.  **Check PostCSS**: Verify `postcss.config.mjs` is not using the Tailwind 4 plugin (`@tailwindcss/postcss`) if the project is configured for Tailwind 3.
+2.  **Clean Build**: Wipe `node_modules` and `package-lock.json`, then run `npm install`.
+3.  **Restart Server**: Hot-reloading may fail during config changes; always restart the dev server.
 
 ---
 
