@@ -15,10 +15,10 @@ description: >
 
 ---
 
-## Step 1 — Aesthetic Research & Direction (Blueprint Selection)
-Browse 1-2 websites that embody a high-end aesthetic. **MANDATORY**: Select a base "Design Blueprint" from `.agents/references/v2-premium-design/blueprints/` (e.g., Stripe, Linear, Apple) that aligns with the brand goals. Identify key visual patterns, layout structures, and unique details from this blueprint.
+## Step 1 — Aesthetic Direction (Blueprint Selection)
+**MANDATORY**: Select a base "Design Blueprint" from `.agents/references/v2-premium-design/blueprints/` (e.g., Stripe, Linear, Apple) that aligns with the brand goals. Identify key visual patterns, layout structures, and unique details from this blueprint.
 
-Commit to a BOLD aesthetic direction based on your research and the selected blueprint. State WHY this aesthetic will make the site stand out vs. competitors. Define **3 Visual Non-Negotiables** for the build.
+Commit to a BOLD aesthetic direction based on the brand DNA, original tagline, and the selected blueprint. State WHY this aesthetic is the perfect evolution of the original brand. Define **3 Visual Non-Negotiables** for the build.
 
 Define the Tailwind theme extension with exact hex values (which will be converted to named tokens in `tailwind.config.js`).
 

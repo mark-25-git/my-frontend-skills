@@ -33,7 +33,7 @@ Generate 3 distinct messaging directions internally. Evaluate them against the a
 
 ## Step 3 — Complete Output (No Placeholders)
 Write complete copy for:
-1. **Homepage** — Hero headline, subheadline, value prop section, primary CTA.
+1. **Homepage** — Hero headline, subheadline, value prop section, primary CTA. **MANDATORY**: If an "Original Tagline" was identified in Gate 0.5, it MUST be used as the primary Hero headline or prominently featured core brand message.
 2. **About Page** — Core message.
 3. **Money Page** — Conversion headline, offer description, CTA.
 

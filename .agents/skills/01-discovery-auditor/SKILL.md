@@ -19,14 +19,15 @@ This gate auto-populates the client brief. The pipeline cannot start Gate 1 with
 ### Step 1 — Scrape the Target URL
 Visit the Homepage, About page, and any pricing or service page. Extract:
 - Value proposition
+- Original Tagline (if any)
 - Ideal Customer Profile (ICP)
 - Unique differentiators
 - Brand tone and language
 
 ### Step 2 — Online Research (Required)
-Search for the business online using whatever sources are most relevant for the industry and business type. The goal is to find real customer opinions, market positioning, and competitive context that the website alone won't reveal. Identify 1-2 "aesthetic benchmarks"—competitors or leading brands that represent the visual standard the client should aspire to.
+Search for the business online using whatever sources are most relevant for the industry and business type. The goal is to find real customer opinions and brand presence that the website alone won't reveal.
 
-Synthesize what you find to build a more accurate customer profile than the website alone would give.
+Synthesize what you find to build a more accurate customer profile.
 
 ### Step 3 — Append to PROJECT_STATE.md
 Add this entry at the bottom of `PROJECT_STATE.md`. 
@@ -42,6 +43,7 @@ Add this entry at the bottom of `PROJECT_STATE.md`.
 - **Business Name:** ...
 - **Industry:** ...
 - **One-Sentence Pitch:** ...
+- **Original Tagline:** ...
 - **Core Product / Service:** ...
 - **Value Proposition:** ...
 - **Differentiator:** ...
@@ -59,7 +61,7 @@ Add this entry at the bottom of `PROJECT_STATE.md`.
 ### Online Research Findings
 - **Customer Praise:** ...
 - **Customer Complaints:** ...
-- **Market Positioning vs. Competitors:** ...
+- **Brand Presence:** [How the brand appears outside their own site]
 
 ### Handoff
 Client brief complete. ⏸ Halting for user review before Gate 1A.

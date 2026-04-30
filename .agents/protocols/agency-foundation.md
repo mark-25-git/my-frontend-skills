@@ -60,6 +60,7 @@ This protocol defines the communication and engineering standards for all agents
 - **Honest Asset Audit**: If client assets (logos, images) are identified as low-quality during a build, record them in the chat directly and continue with the original assets.
 - **State Reporting**: The Engineer must update `completed_files` in `PROJECT_STATE.md` every time a file is written.
 - **Auto-Onboarding**: Gate 0.5 automatically populates `product-marketing-context.md` by scraping the target URL and searching online. The document does not need to be filled manually before the pipeline starts.
+- **Tagline Preservation**: If the original business has a tagline, it MUST be preserved and the new website built around it. It is the core anchor for all copy and design decisions.
 
 ---
 
@@ -68,6 +69,7 @@ This protocol defines the communication and engineering standards for all agents
 - **Context Calibration**: Before advising, `marketing-pro` skills MUST read `PROJECT_STATE.md` to ground their output in the client's specific DNA and goals, avoiding generic industry defaults.
 - **Orchestration**: Only the numbered Gate Specialists (00-07) have the authority to progress the project state or finalize deliverables.
 - **Consultation mandatory**: Gate 1, 2, and 4 MUST consult their respective `marketing-pro` library counterparts to ensure the build avoids generic placeholders.
+- **No Competitor Checking**: Competitor research is strictly forbidden. We do not care how competitors look or function; we build based on the client's original DNA and modern high-end benchmarks only.
 
 ---
 
