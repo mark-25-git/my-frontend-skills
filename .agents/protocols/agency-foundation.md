@@ -27,7 +27,6 @@ This protocol defines the communication and engineering standards for all agents
     - **Blueprint Adoption**: For every project, a design blueprint MUST be selected from `.agents/references/v2-premium-design/blueprints/`.
     - **Anti-AI Clichés**: Actively avoid telltale AI patterns: purple-pink gradients, left-border accents, and overreliance on Inter/Roboto fonts.
     - **Placeholder Philosophy**: Use professional placeholders (e.g., `[icon]`, `16:9 image`) instead of poor-quality SVGs or generic emojis.
-    - **Toolkit Usage**: Use the advanced components in `.agents/references/v2-premium-design/toolkit/` (Tweaks Panel, Device Frames, Motion Engine) for all builds.
 - **Automatic Error Handling**: Every function must include try-catch blocks or equivalent error handling. Fail gracefully and provide clear logs.
 - **Automated Testing Baseline**: Automatically generate a simple unit test for every core logic function.
 

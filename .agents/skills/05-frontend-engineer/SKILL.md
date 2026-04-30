@@ -73,9 +73,6 @@ Before building full components, create a "viewable v0" draft (e.g., `index-v0.h
 
 ### 3. Implementation
 - **Blueprint Fidelity**: Adhere strictly to the design patterns (shadows, spacing, OpenType features) of the selected blueprint in `.agents/references/v2-premium-design/blueprints/`.
-- **Toolkit Usage**: Proactively use components from `.agents/references/v2-premium-design/toolkit/advanced-patterns.md`. 
-    - Always include a **Tweaks Panel** for live parameter adjustment.
-    - Use **Device Frames** for mobile/browser mockup presentations.
 - **Visual Integrity**: Follow the Aesthetic Direction and Visual Non-Negotiables from the Gate 1B log entry.
 - **Copy**: Use the exact copy from the Gate 2 log entry in `PROJECT_STATE.md`. No placeholders (after v0 is approved).
 - **SEO**: Inject metadata from the Gate 1.5 log entry into the page headers.

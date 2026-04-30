@@ -45,7 +45,7 @@ Use `read_browser_page` on the `Dev Server` URL (e.g., `http://localhost:3000`).
 5. **Responsive Flow**: Correct stacking on mobile? No horizontal overflow?
 6. **Interactive States**: Hover effects, focus states, transitions — do they feel premium? 
 7. **Functional Integrity**: Are all buttons and links connected? (No broken paths or dead buttons).
-8. **Aesthetic WOW Factor**: Does the build match the Visual Non-Negotiables from Gate 1B? Does it use the **Toolkit** components (Tweaks, Frames) effectively?
+8. **Aesthetic WOW Factor**: Does the build match the Visual Non-Negotiables from Gate 1B?
 
 ---
 
